@@ -26,7 +26,7 @@ public class AdminPageTest extends BaseTest{
 		
 		//paimam teksta, tikrinam ar prisijungimas sekmingas
 		String actualLoginText = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/div[1]/strong")).getText();
-		String expectedLoginText = "SUKURTI NAUDOTOJÀ";
+		String expectedLoginText = "SUKURTI NAUDOTOJÄ„";
 		assertEquals(expectedLoginText, actualLoginText);
 		
 
