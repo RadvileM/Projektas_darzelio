@@ -1,11 +1,9 @@
 package Tests;
 
-import static org.junit.Assert.*;
 
-import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.internal.FindsByCssSelector;
-import org.openqa.selenium.internal.FindsByLinkText;
+import static org.testng.Assert.assertEquals;
+import org.testng.annotations.Test;
 
 import BaseTest.BaseTest;
 import Utils.WaitUtils;
@@ -14,12 +12,10 @@ import page.MainParentPage;
 
 public class ParentPageTest extends BaseTest{
 
-	private MainParentPage parentPage = new MainParentPage(driver);
-	private MainAdminPage mainPage = new MainAdminPage(driver);
-
 	
 	@Test
 	public void mainParentPageTest () throws InterruptedException {
+		MainParentPage parentPage = new MainParentPage(driver);
 		
 		parentPage.addInputParentUsername();
 		parentPage.addInputParentPassword();
@@ -35,6 +31,8 @@ public class ParentPageTest extends BaseTest{
 
 	@Test
 	public void parentLogoutTest () throws InterruptedException {
+		MainParentPage parentPage = new MainParentPage(driver);
+		
 		parentPage.addInputParentUsername();
 		parentPage.addInputParentPassword();
 		parentPage.clickLoginButton();

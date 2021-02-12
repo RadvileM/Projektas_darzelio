@@ -35,6 +35,9 @@ public class MainAdminPage extends AbstractPage{
 	@FindBy(linkText = "Administratorius")
 	private WebElement successfulAdminLogin;
 	
+	@FindBy(css = "#root > div > div > div > div > div > form > div.form-group.mx-auto.mt-3 > label")
+	public WebElement successfulAdminLogout;
+	
 
 	
 	public MainAdminPage(WebDriver driver) {
@@ -63,5 +66,12 @@ public class MainAdminPage extends AbstractPage{
 		logoutButton.click();
 	}
 	
+	public String textSuccessfulAdminLogin() {
+		return successfulAdminLogin.getText();
+	}
+	
+	public String textSuccessfulAdminLogout() {
+		return successfulAdminLogout.getText();
+	}
 
 }

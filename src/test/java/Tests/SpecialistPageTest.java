@@ -1,16 +1,11 @@
 package Tests;
 
-import static org.junit.Assert.*;
 
-import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.internal.FindsByCssSelector;
-import org.openqa.selenium.internal.FindsByLinkText;
+import static org.testng.Assert.assertEquals;
 
 import BaseTest.BaseTest;
-import Utils.WaitUtils;
-import page.MainAdminPage;
-import page.MainParentPage;
+
 
 public class SpecialistPageTest extends BaseTest{
 		
