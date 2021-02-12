@@ -23,7 +23,6 @@ public class AdminPageTest extends BaseTest{
 		
 		//paimam teksta, tikrinam ar prisijungimas sekmingas
 		String actualLoginText = mainPage.textSuccessfulAdminLogin();
-		//String actualLoginText = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/div[1]/strong")).getText();
 		String expectedLoginText = "Administratorius";
 		assertEquals(expectedLoginText, actualLoginText);
 		
@@ -32,7 +31,6 @@ public class AdminPageTest extends BaseTest{
 		//admin logout
 	mainPage.clickLogoutButton();
 	String actualLogoutText = mainPage.textSuccessfulAdminLogout();
-	//String actualLogoutText =  driver.findElement(By.cssSelector("#root > div > div > div > div > div > form > div.form-group.mx-auto.mt-3 > label")).getText();
 	String expectedLogoutText = "Prisijungimo vardas";
 	assertEquals(expectedLogoutText, actualLogoutText);
 

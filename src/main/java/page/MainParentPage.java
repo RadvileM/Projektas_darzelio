@@ -12,29 +12,33 @@ public class MainParentPage extends AbstractPage {
 	
 	//inputs
 	
-	@FindBy( css = "#root > div > div > div > div > div > form > div.form-group.mx-auto.mt-3 > div > input")
+	@FindBy( css = "#root > div > div > div > div > form > div.form-group.mx-auto.mt-3 > div > input")
 	public WebElement inputUsername;
 	
 	
-	@FindBy( css = "#root > div > div > div > div > div > form > div:nth-child(2) > div > input")
+	@FindBy( css = "#root > div > div > div > div > form > div:nth-child(2) > div > input")
 	private WebElement inputPassword;
 	
+	
 	//buttons
-	@FindBy(css = "#root > div > div > div > div > div > form > div.form-group.text-center.mt-5 > button > span")
+	@FindBy(css = "#root > div > div > div > div > form > div.form-group.text-center.mt-5 > button")
 	private WebElement loginButton;
 	
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li.nav-item.my-auto > a")
+	
+	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(6) > a")
 	private WebElement logoutButton;
 	
 	
+	
+	
+	
 	//text
-	@FindBy(linkText = "Vaiko atstovas")
+	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(5) > a > span")
 	private WebElement successfulParentLogin;
 	
-	@FindBy(linkText = "Prisijungimo vardas")
+	@FindBy(css = "#root > div > div > div > div > form > div.form-group.mx-auto.mt-3 > label")
 	private WebElement successfulParentLogout;
 	
-
 	
 	public MainParentPage(WebDriver driver) {
 		super(driver);
@@ -57,5 +61,12 @@ public class MainParentPage extends AbstractPage {
 		logoutButton.click();
 	}
 	
+	public String textSuccessfulParentLogin() {
+		return successfulParentLogin.getText();
+	}
+	
+	public String textSuccessfulParentLogout() {
+		return successfulParentLogout.getText();
+	}
 
 }
