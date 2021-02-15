@@ -1,11 +1,9 @@
 package Tests;
 
-import static org.junit.Assert.*;
 
-import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.internal.FindsByCssSelector;
-import org.openqa.selenium.internal.FindsByLinkText;
+import static org.testng.Assert.assertEquals;
+import org.testng.annotations.Test;
 
 import BaseTest.BaseTest;
 import Utils.WaitUtils;
@@ -14,12 +12,10 @@ import page.MainParentPage;
 
 public class ParentPageTest extends BaseTest{
 
-	private MainParentPage parentPage = new MainParentPage(driver);
-	private MainAdminPage mainPage = new MainAdminPage(driver);
-
 	
 	@Test
-	public void mainParentPageTest () throws InterruptedException {
+	public void parentLoginPageTest () throws InterruptedException {
+		MainParentPage parentPage = new MainParentPage(driver);
 		
 		parentPage.addInputParentUsername();
 		parentPage.addInputParentPassword();
@@ -27,21 +23,26 @@ public class ParentPageTest extends BaseTest{
 		Thread.sleep(3000);
 		
 		//paimam teksta, tikrinam ar prisijungimas sekmingas
-		String actualLoginText = driver.findElement(By.cssSelector("#root > div > nav > div:nth-child(3) > li:nth-child(1) > a > div > span")).getText();
+		String actualLoginText = parentPage.textSuccessfulParentLogin();
 		String expectedLoginText = "Vaiko atstovas";
 		assertEquals(expectedLoginText, actualLoginText);
 		}
+	
+	
 
 
 	@Test
 	public void parentLogoutTest () throws InterruptedException {
+		MainParentPage parentPage = new MainParentPage(driver);
+		
 		parentPage.addInputParentUsername();
 		parentPage.addInputParentPassword();
 		parentPage.clickLoginButton();
 		Thread.sleep(3000);
 		parentPage.clickLogoutButton();
+
 		
-		String actualLogoutText =  driver.findElement(By.cssSelector("#root > div > div > div > div > div > form > div.form-group.mx-auto.mt-3 > label")).getText();
+		String actualLogoutText = parentPage.textSuccessfulParentLogout();
 		String expectedLogoutText = "Prisijungimo vardas";
 		assertEquals(expectedLogoutText, actualLogoutText);
 		
