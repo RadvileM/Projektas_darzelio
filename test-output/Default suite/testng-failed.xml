@@ -8,7 +8,10 @@
           <include name="specialistLoginPageTest"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+<<<<<<< HEAD
           <include name="specialistLogputPageTest"/>
+=======
+>>>>>>> a39a164cf28b0c62af64f73598e0be6e87e95166
         </methods>
       </class> <!-- Tests.SpecialistPageTest -->
     </classes>
