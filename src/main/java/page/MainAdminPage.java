@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.Test;
 
 import Utils.WaitUtils;
 
@@ -18,23 +17,26 @@ public class MainAdminPage extends AbstractPage{
 
 	//inputs
 	
-	@FindBy( css = "#root > div > div > div > div > div > form > div.form-group.mx-auto.mt-3 > div > input")
+	@FindBy( css = "#root > div > div > div > div > form > div.form-group.mx-auto.mt-3 > div > input")
 	private WebElement inputUsername;
 	
 	
-	@FindBy( css = "#root > div > div > div > div > div > form > div:nth-child(2) > div > input")
+	@FindBy( css = "#root > div > div > div > div > form > div:nth-child(2) > div > input")
 	private WebElement inputPassword;
 	
 	//buttons
-	@FindBy(css = "#root > div > div > div > div > div > form > div.form-group.text-center.mt-5 > button > span")
+	@FindBy(css = "#root > div > div > div > div > form > div.form-group.text-center.mt-5 > button")
 	private WebElement loginButton;
 	
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li.nav-item.my-auto > a")
+	@FindBy(css = "#root > div > nav > div:nth-child(3) > li > a")
 	private WebElement logoutButton;
 	
 	//text
 	@FindBy(linkText = "Administratorius")
 	private WebElement successfulAdminLogin;
+	
+	@FindBy(css = "#root > div > div > div > div > form > div.form-group.mx-auto.mt-3 > label")
+	public WebElement successfulAdminLogout;
 	
 
 	
@@ -45,7 +47,6 @@ public class MainAdminPage extends AbstractPage{
 
 	public void addInputUsername() {
 		inputUsername.sendKeys(username);
-	
 	}
 	
 
@@ -56,14 +57,18 @@ public class MainAdminPage extends AbstractPage{
 	
 	public void clickLoginButton() {
 		loginButton.click();
-		
-	
 	}
 	
 	public void clickLogoutButton() {
 		logoutButton.click();
 	}
 	
+	public String textSuccessfulAdminLogin() {
+		return successfulAdminLogin.getText();
+	}
+	
+	public String textSuccessfulAdminLogout() {
+		return successfulAdminLogout.getText();
+	}
 
-			
 }
