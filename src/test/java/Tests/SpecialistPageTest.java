@@ -20,8 +20,8 @@ public class SpecialistPageTest extends BaseTest {
 	  Thread.sleep(3000);
 	  
 		String actualLoginText = specialistPage.textSuccessfulSpecialistLogin();
-		String expectedLoginText = "Švietimo specialistas";
-		assertEquals(expectedLoginText, actualLoginText);
+		String expectedLoginText = "TomasMikalauskas" + "\n" + "Švietimo specialistas";
+		assertEquals(actualLoginText, expectedLoginText);
   }
   
   @Test
@@ -36,6 +36,6 @@ public class SpecialistPageTest extends BaseTest {
 	  
 		String actualLoginText = specialistPage.textSuccessfulSpecialistLogout();
 		String expectedLoginText = "Prisijungimo vardas";
-		assertEquals(expectedLoginText, actualLoginText);
+		assertEquals(actualLoginText, expectedLoginText);
   }
 }
