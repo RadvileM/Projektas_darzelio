@@ -141,21 +141,26 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-12T14:47:25 EET" name="Default suite" finished-at="2021-02-12T14:47:33 EET" duration-ms="7551">
+  <suite started-at="2021-02-18T19:57:36 EET" name="Default suite" finished-at="2021-02-18T19:57:44 EET" duration-ms="7463">
     <groups>
     </groups>
-    <test started-at="2021-02-12T14:47:25 EET" name="Default test" finished-at="2021-02-12T14:47:33 EET" duration-ms="7551">
+    <test started-at="2021-02-18T19:57:36 EET" name="Default test" finished-at="2021-02-18T19:57:44 EET" duration-ms="7463">
       <class name="Tests.SpecialistPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.SpecialistPageTest@40cb8df7]" started-at="2021-02-12T14:47:25 EET" name="setUp" finished-at="2021-02-12T14:47:29 EET" duration-ms="3413" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.SpecialistPageTest@40cb8df7]" started-at="2021-02-18T19:57:36 EET" name="setUp" finished-at="2021-02-18T19:57:40 EET" duration-ms="3655" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="specialistLogputPageTest()[pri:0, instance:Tests.SpecialistPageTest@40cb8df7]" started-at="2021-02-12T14:47:29 EET" name="specialistLogputPageTest" finished-at="2021-02-12T14:47:33 EET" duration-ms="3801" status="PASS">
+        <test-method signature="specialistLoginPageTest()[pri:0, instance:Tests.SpecialistPageTest@40cb8df7]" started-at="2021-02-18T19:57:40 EET" name="specialistLoginPageTest" finished-at="2021-02-18T19:57:43 EET" duration-ms="3498" status="PASS">
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- specialistLogputPageTest -->
         <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.SpecialistPageTest@40cb8df7]" started-at="2021-02-12T14:47:33 EET" name="tearDown" finished-at="2021-02-12T14:47:33 EET" duration-ms="270" status="PASS">
 >>>>>>> a39a164cf28b0c62af64f73598e0be6e87e95166
+=======
+        </test-method> <!-- specialistLoginPageTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.SpecialistPageTest@40cb8df7]" started-at="2021-02-18T19:57:43 EET" name="tearDown" finished-at="2021-02-18T19:57:44 EET" duration-ms="246" status="PASS">
+>>>>>>> main
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
