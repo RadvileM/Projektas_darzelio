@@ -16,8 +16,23 @@ public class SpecialistPasswordChangeTest extends BaseTest{
 		
 	SpecialistPasswordChange passwordChange = new SpecialistPasswordChange(driver);
 	
-	//login as a Specialist
+	//login as an admin
+	passwordChange.addAdminUsername();
+	passwordChange.addAdminPassword();
+	passwordChange.clickLoginButton();
+	Thread.sleep(1000);
+
+
 	
+	//create new specialist
+	
+	passwordChange.createNewSpecialist();
+	passwordChange.clickCreateNewSpecialistButton();
+	
+	//admin logout
+	passwordChange.clickAdminLogoutButton();
+	
+	//specialist login
 	passwordChange.addSpecialistUsername();
 	passwordChange.addSpecialistPassword();
 	passwordChange.clickLoginButton();
@@ -31,17 +46,12 @@ public class SpecialistPasswordChangeTest extends BaseTest{
 	passwordChange.addOldPassword();
 	passwordChange.addNewPassword();
 	passwordChange.clickChangeButton();
-	
-	//try to login again to see if the login with new password works
+	Thread.sleep(3000);
 
-	passwordChange.addSpecialistUsername();
-	passwordChange.addChangedSpecialistPassword();
-	passwordChange.clickLoginButton();
-	Thread.sleep(1000);
 	
-	//assert if the login is successful
+	//assert to check if the password has been changed
 	String actualLoginText = passwordChange.textSuccessfulSpecialistLogin();
-	String expectedLoginText = "Specialistas" + "\n" + "Ðvietimo specialistas";
+	String expectedLoginText = "Slaptaþodis atnaujintas!";
 	assertEquals(actualLoginText, expectedLoginText);
 	
 	
