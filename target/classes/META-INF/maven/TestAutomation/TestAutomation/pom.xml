@@ -33,7 +33,7 @@
 		</dependency>
 
 
-<<<<<<< HEAD
+
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 
 	<dependency>
@@ -44,9 +44,7 @@
 </dependency>
 	
 		
-		<dependency>
-=======
->>>>>>> main
+	
 
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 

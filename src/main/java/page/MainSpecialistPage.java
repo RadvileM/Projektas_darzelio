@@ -31,7 +31,6 @@ public class MainSpecialistPage extends AbstractPage {
 	
 	//text
 	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(5) > a")
-	//(css = "#root > div > nav > div:nth-child(3) > li:nth-child(5) > a > span")
 	private WebElement successfulSpecialistLogin;
 	
 	

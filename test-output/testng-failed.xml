@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tests.SpecialistPageTest">
+      <class name="Tests.SpecialistPasswordChangeTest">
         <methods>
-          <include name="specialistLoginPageTest"/>
           <include name="tearDown"/>
+          <include name="specialistPasswordChangeTest"/>
           <include name="setUp"/>
-<<<<<<< HEAD
-          <include name="specialistLogputPageTest"/>
-=======
->>>>>>> a39a164cf28b0c62af64f73598e0be6e87e95166
         </methods>
-      </class> <!-- Tests.SpecialistPageTest -->
+      </class> <!-- Tests.SpecialistPasswordChangeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
