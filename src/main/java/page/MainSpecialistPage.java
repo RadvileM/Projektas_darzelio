@@ -1,17 +1,20 @@
 package page;
 
+import java.util.Random;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class MainSpecialistPage extends AbstractPage {
+	Random rand = new Random();
 	
 	private String username = "TomasMikalauskas";
 	private String password = "TomasMikalauskas";
 	private String name = "Tomas";
 	private String lastname = "Tomas";
 	private String mobilephone = "12345678";
-	private String email = "tomas@tomas.lt";
+	private String email = "tomas@tomas" + rand.nextInt(100) + ".lt";
 	
 	
 	//inputs
@@ -100,18 +103,22 @@ public class MainSpecialistPage extends AbstractPage {
 	// add Specialist personal data
 	
 	public void addSpecialistName() {
+		inputPersonalName.clear();
 		inputPersonalName.sendKeys(name);
 	}
 	
 	public void addSpecialistLastName() {
+		inputPersonalLastname.clear();
 		inputPersonalLastname.sendKeys(lastname);
 	}
 	
 	public void addSpecialistPhone() {
+		inputMobilphone.clear();
 		inputMobilphone.sendKeys(mobilephone);
 	}
 	
 	public void addSpecialistEmail() {
+		inputEmail.clear();
 		inputEmail.sendKeys(email);
 	}
 	

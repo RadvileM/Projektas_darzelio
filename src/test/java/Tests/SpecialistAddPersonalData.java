@@ -33,7 +33,7 @@ public class SpecialistAddPersonalData extends BaseTest {
 	specialistPage.addSpecialistEmail();
 	
 	specialistPage.clickUpdateMyDataButton();
-	Thread.sleep(2000);
+	Thread.sleep(3000);
 	
 	//assert to check if the data was updated
 	
