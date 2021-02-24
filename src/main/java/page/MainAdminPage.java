@@ -1,12 +1,9 @@
 package page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
 
-import Utils.WaitUtils;
 
 
 
@@ -44,7 +41,19 @@ public class MainAdminPage extends AbstractPage{
 		super(driver);
 	}
 
-
+//methods 
+	public void doAdminLogin() {
+		inputUsername.sendKeys(username);
+		inputPassword.sendKeys(password);
+		loginButton.click();		
+	}
+		
+	
+	public void doAdminLogout() {
+		logoutButton.click();
+		
+	}
+	
 	public void addInputUsername() {
 		inputUsername.sendKeys(username);
 	}
@@ -57,10 +66,6 @@ public class MainAdminPage extends AbstractPage{
 	
 	public void clickLoginButton() {
 		loginButton.click();
-	}
-	
-	public void clickLogoutButton() {
-		logoutButton.click();
 	}
 	
 	public String textSuccessfulAdminLogin() {

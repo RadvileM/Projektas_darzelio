@@ -12,14 +12,12 @@ public class SpecialistAddPersonalData extends BaseTest {
 	
 	
   @Test
-  public void SpecialistAddPersonalDataTest() throws InterruptedException {
+  public void specialistAddPersonalDataTest() throws InterruptedException {
 	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
 	  SpecialistPasswordChange passwordChange = new SpecialistPasswordChange(driver);
 	  
 	  //Specialist Login
-	 specialistPage.addInputSpecialistUsername();
-	 specialistPage.addInputSpecialistPassword();
-	 specialistPage.clickLoginButton();
+	 specialistPage.doSpecialistLogin();
 	 Thread.sleep(1000);
 	 
 	 //Specialist click "Mano duomenys" adding new data

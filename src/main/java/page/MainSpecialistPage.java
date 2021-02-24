@@ -75,20 +75,22 @@ public class MainSpecialistPage extends AbstractPage {
 
 	//methods
 	// Specialist login
-	public void addInputSpecialistUsername() {
+	public void doSpecialistLogin() {
 		inputUsername.sendKeys(username);
-	}
-	
-
-	public void addInputSpecialistPassword() {
 		inputPassword.sendKeys(password);
-	}
-
-	public void clickLoginButton() {
 		loginButton.click();
 	}
 	
-	public void clickLogoutButton() {
+
+	//public void addInputSpecialistPassword() {
+	//	inputPassword.sendKeys(password);
+	//}
+
+	//public void clickLoginButton() {
+	//	loginButton.click();
+	//}
+	
+	public void doSpecialistLogout() {
 		logoutButton.click();
 	}
 	

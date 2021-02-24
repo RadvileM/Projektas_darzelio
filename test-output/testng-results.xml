@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-24T08:39:41 EET" name="Default suite" finished-at="2021-02-24T08:39:51 EET" duration-ms="9761">
+  <suite started-at="2021-02-24T17:49:47 EET" name="Default suite" finished-at="2021-02-24T17:49:57 EET" duration-ms="10371">
     <groups>
     </groups>
-    <test started-at="2021-02-24T08:39:41 EET" name="Default test" finished-at="2021-02-24T08:39:51 EET" duration-ms="9761">
-      <class name="Tests.SpecialistAddPersonalData">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.SpecialistAddPersonalData@2beee7ff]" started-at="2021-02-24T08:39:41 EET" name="setUp" finished-at="2021-02-24T08:39:45 EET" duration-ms="3167" status="PASS">
+    <test started-at="2021-02-24T17:49:47 EET" name="Default test" finished-at="2021-02-24T17:49:57 EET" duration-ms="10371">
+      <class name="Tests.SpecialistAddPersonalDataTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.SpecialistAddPersonalDataTest@2beee7ff]" started-at="2021-02-24T17:49:47 EET" name="setUp" finished-at="2021-02-24T17:49:50 EET" duration-ms="3357" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="SpecialistAddPersonalDataTest()[pri:0, instance:Tests.SpecialistAddPersonalData@2beee7ff]" started-at="2021-02-24T08:39:45 EET" name="SpecialistAddPersonalDataTest" finished-at="2021-02-24T08:39:51 EET" duration-ms="6275" status="PASS">
+        <test-method signature="specialistAddPersonalDataTest()[pri:0, instance:Tests.SpecialistAddPersonalDataTest@2beee7ff]" started-at="2021-02-24T17:49:50 EET" name="specialistAddPersonalDataTest" finished-at="2021-02-24T17:49:57 EET" duration-ms="6493" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SpecialistAddPersonalDataTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.SpecialistAddPersonalData@2beee7ff]" started-at="2021-02-24T08:39:51 EET" name="tearDown" finished-at="2021-02-24T08:39:51 EET" duration-ms="277" status="PASS">
+        </test-method> <!-- specialistAddPersonalDataTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.SpecialistAddPersonalDataTest@2beee7ff]" started-at="2021-02-24T17:49:57 EET" name="tearDown" finished-at="2021-02-24T17:49:57 EET" duration-ms="466" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Tests.SpecialistAddPersonalData -->
+      </class> <!-- Tests.SpecialistAddPersonalDataTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

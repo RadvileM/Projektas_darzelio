@@ -1,7 +1,5 @@
 package Tests;
 
-
-import org.openqa.selenium.By;
 import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
 
@@ -16,23 +14,29 @@ public class AdminPageTest extends BaseTest{
 	public void mainPageTest () throws InterruptedException {
 		MainAdminPage mainPage = new MainAdminPage(driver);
 		
-		mainPage.addInputUsername();
-		mainPage.addInputPassword();
-		mainPage.clickLoginButton();
-		Thread.sleep(3000);
-		
+		mainPage.doAdminLogin();
 		//paimam teksta, tikrinam ar prisijungimas sekmingas
 		String actualLoginText = mainPage.textSuccessfulAdminLogin();
 		String expectedLoginText = "Administratorius";
 		assertEquals(expectedLoginText, actualLoginText);
 		
-
-
+		
 		//admin logout
-	mainPage.clickLogoutButton();
-	String actualLogoutText = mainPage.textSuccessfulAdminLogout();
-	String expectedLogoutText = "Prisijungimo vardas";
-	assertEquals(expectedLogoutText, actualLogoutText);
+		mainPage.doAdminLogout();
+		
+		String actualLogoutText = mainPage.textSuccessfulAdminLogout();
+		String expectedLogoutText = "Prisijungimo vardas";
+		assertEquals(expectedLogoutText, actualLogoutText);
+		
+	//	mainPage.addInputUsername();
+	//	mainPage.addInputPassword();
+	//	mainPage.clickLoginButton();
+	//	Thread.sleep(3000);
+		
+
+
+	//mainPage.clickLogoutButton();
+
 
 	}
 		

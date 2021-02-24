@@ -14,25 +14,21 @@ public class SpecialistPageTest extends BaseTest {
   public void specialistLoginPageTest() throws InterruptedException {
 	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
 	  
-	  specialistPage.addInputSpecialistUsername();
-	  specialistPage.addInputSpecialistPassword();
-	  specialistPage.clickLoginButton();
+	  specialistPage.doSpecialistLogin();
 	  Thread.sleep(3000);
 	  
 		String actualLoginText = specialistPage.textSuccessfulSpecialistLogin();
 		String expectedLoginText = "TomasMikalauskas" + "\n" + "Švietimo specialistas";
-		assertEquals(actualLoginText, expectedLoginText);
+		assertEquals(actualLoginText, expectedLoginText);		
   }
   
   @Test
-  public void specialistLogputPageTest() throws InterruptedException {
+  public void specialistLogoutPageTest() throws InterruptedException {
 	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
 	  
-	  specialistPage.addInputSpecialistUsername();
-	  specialistPage.addInputSpecialistPassword();
-	  specialistPage.clickLoginButton();
+	  specialistPage.doSpecialistLogin();
 	  Thread.sleep(3000);
-	  specialistPage.clickLogoutButton();
+	  specialistPage.doSpecialistLogout();
 	  
 		String actualLoginText = specialistPage.textSuccessfulSpecialistLogout();
 		String expectedLoginText = "Prisijungimo vardas";
