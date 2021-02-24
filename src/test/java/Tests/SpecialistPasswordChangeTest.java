@@ -51,7 +51,7 @@ public class SpecialistPasswordChangeTest extends BaseTest{
 	
 	//assert to check if the password has been changed
 	String actualLoginText = passwordChange.textSuccessfulSpecialistLogin();
-	String expectedLoginText = "Slaptaþodis atnaujintas!";
+	String expectedLoginText = "Slaptažodis atnaujintas!";
 	assertEquals(actualLoginText, expectedLoginText);
 	
 	

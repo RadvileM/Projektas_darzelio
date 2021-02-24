@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tests.SpecialistPasswordChangeTest">
+      <class name="Tests.SpecialistAddPersonalData">
         <methods>
           <include name="tearDown"/>
-          <include name="specialistPasswordChangeTest"/>
+          <include name="SpecialistAddPersonalDataTest"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- Tests.SpecialistPasswordChangeTest -->
+      </class> <!-- Tests.SpecialistAddPersonalData -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

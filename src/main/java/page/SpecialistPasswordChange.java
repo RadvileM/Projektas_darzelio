@@ -28,13 +28,13 @@ public class SpecialistPasswordChange extends AbstractPage{
 	@FindBy( css = "#root > div > div > div > div > form > div:nth-child(2) > div > input")
 	private WebElement inputPassword;
 	
-	@FindBy(id = "Dabartinis slaptaþodis")
+	@FindBy(id = "Dabartinis slaptaÅ¾odis")
 	private WebElement oldPassword;
 	
-	@FindBy(id = "Naujas slaptaþodis")
+	@FindBy(id = "Naujas slaptaÅ¾odis")
 	private WebElement addNewPassword;
 	
-	@FindBy(id = "Pakartokite naujà slaptaþodá")
+	@FindBy(id = "Pakartokite naujÄ… slaptaÅ¾odÄ¯")
 	private WebElement repeatNewPassword;
 	
 	@FindBy(css = "#root > div > div > div > div:nth-child(2) > div > form > div.form-group.m-3 > div")
