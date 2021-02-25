@@ -52,7 +52,7 @@ public class SpecialistPasswordChange extends AbstractPage{
 	@FindBy(css = "#root > div > nav > div:nth-child(3) > li > a")
 	private WebElement logoutButton;
 	
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(4) > a")
+	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(5) > a")
 	private WebElement myDataButton;
 	
 		

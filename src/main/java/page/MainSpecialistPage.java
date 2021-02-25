@@ -47,7 +47,7 @@ public class MainSpecialistPage extends AbstractPage {
 	private WebElement loginButton;
 	
 	
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(6) > a")
+	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(7) > a")
 	private WebElement logoutButton;
 	
 	//"Mano duomenys"
@@ -56,7 +56,7 @@ public class MainSpecialistPage extends AbstractPage {
 	
 	
 	//text
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(5) > a")
+	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(6) > a")
 	private WebElement successfulSpecialistLogin;
 	
 	@FindBy(css = "#root > div > div > div > div > form > div.form-group.mx-auto.mt-3 > label")
