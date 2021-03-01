@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tests.KindergartenAddToList">
+      <class name="Tests.ParentPageTest">
         <methods>
+          <include name="parentLogoutTest"/>
           <include name="tearDown"/>
-          <include name="f"/>
+          <include name="openHomePage"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- Tests.KindergartenAddToList -->
+      </class> <!-- Tests.ParentPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
