@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class MainParentPage extends AbstractPage {
+public class MainParentPage extends AbstractPage {	
 	Random rand = new Random();
 	
 	private String username = "MariusAdomaitis";

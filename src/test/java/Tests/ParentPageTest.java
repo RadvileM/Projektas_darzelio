@@ -1,6 +1,7 @@
 package Tests;
 
 import static org.testng.Assert.assertEquals;
+
 import org.testng.annotations.Test;
 
 import BaseTest.BaseTest;
@@ -8,8 +9,8 @@ import Utils.WaitUtils;
 import page.MainParentPage;
 
 public class ParentPageTest extends BaseTest{
-
 	
+		
 	@Test
 	public void parentLoginPageTest () throws InterruptedException {
 		MainParentPage parentPage = new MainParentPage(driver);
@@ -22,10 +23,9 @@ public class ParentPageTest extends BaseTest{
 		String expectedLoginText = "Vaiko atstovas";
 		assertEquals(expectedLoginText, actualLoginText);
 		}
-	
 
 	@Test
-	public void parentLogoutTest () throws InterruptedException {
+	public void parentLogoutTest () throws InterruptedException {		
 		MainParentPage parentPage = new MainParentPage(driver);
 		
 		parentPage.doParentLogin();
