@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="Tests.ChildRegistrationTest">
         <methods>
           <include name="tearDown"/>
@@ -10,6 +11,15 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- Tests.ChildRegistrationTest -->
+=======
+      <class name="Tests.SpecialistPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="specialistLogoutPageTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Tests.SpecialistPageTest -->
+>>>>>>> 6478868cffba8517b9010fa7d718975b0660fe21
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

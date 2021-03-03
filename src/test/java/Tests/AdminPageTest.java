@@ -30,16 +30,6 @@ public class AdminPageTest extends BaseTest{
 		String actualLogoutText = mainPage.textSuccessfulAdminLogout();
 		String expectedLogoutText = "Prisijungimo vardas";
 		assertEquals(expectedLogoutText, actualLogoutText);
-		
-	//	mainPage.addInputUsername();
-	//	mainPage.addInputPassword();
-	//	mainPage.clickLoginButton();
-	//	Thread.sleep(3000);
-		
-
-
-	//mainPage.clickLogoutButton();
-
 
 	}
 		

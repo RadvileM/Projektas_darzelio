@@ -10,6 +10,7 @@ import page.MainSpecialistPage;
 public class SpecialistPageTest extends BaseTest {
 	
 	
+	
   @Test
   public void specialistLoginPageTest() throws InterruptedException {
 	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
