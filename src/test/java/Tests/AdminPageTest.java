@@ -1,6 +1,8 @@
 package Tests;
 
 import static org.testng.Assert.assertEquals;
+
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import BaseTest.BaseTest;
@@ -10,6 +12,7 @@ import page.MainAdminPage;
 public class AdminPageTest extends BaseTest{
 
 	
+
 	@Test
 	public void mainPageTest () throws InterruptedException {
 		MainAdminPage mainPage = new MainAdminPage(driver);

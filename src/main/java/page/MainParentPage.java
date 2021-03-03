@@ -1,7 +1,10 @@
 package page;
 
+import java.util.List;
 import java.util.Random;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByTagName;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,6 +18,17 @@ public class MainParentPage extends AbstractPage {
 	private String lastname = "Adomaitis";
 	private String mobilephone = "12345678";
 	private String email = "marius@adomaitis" + rand.nextInt(100) + ".lt";
+	private String usernameUploadTest = "AtstovasTest";
+	private String passwordUploadTest = "AtstovasTest";
+	private String parentUsername = "Atstovas" + rand.nextInt(1000);
+	private String parentName = "Vardenis";
+	private String parentLastname = "Pavardenis";
+	private String parentID = "12345678" + rand.nextInt(1000);
+	private String parentAddress = "Ukmerges g. 19";
+	private String parentCity = "Vilnius";
+	private String parentEmail = "test@test.lt";
+	private String childID = "3234567" + rand.nextInt(10000);
+	private String birthdate = "09122016";
 	
 	
 	
@@ -26,6 +40,8 @@ public class MainParentPage extends AbstractPage {
 	@FindBy( css = "#root > div > div > div > div > form > div:nth-child(2) > div > input")
 	private WebElement inputPassword;
 	
+	@FindBy (id ="name")
+	private WebElement inputParentName;
 	
 	// add personal data "Mano duomenys"
 	@FindBy (id = "Vardas")
@@ -47,6 +63,17 @@ public class MainParentPage extends AbstractPage {
 		
 	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(6) > a")
 	private WebElement logoutButton;
+	
+	//upload PDF button
+	@FindBy(css = "#root > div > div > div:nth-child(3) > div > table > tbody > tr > td:nth-child(7) > div.btn-group > button.btn.btn-secondary")
+	private WebElement uploadPdfButton;
+	
+	//admin selects the parent button
+	@FindBy(id = "ROLE_PARENT")
+	private WebElement selectParent;
+	
+	@FindBy(css = "#root > div > div > div > div.col-12.col-sm-12.col-md-4.col-lg-4 > form > button.btn.btn-success.mr-3")
+	private WebElement clickCreate;
 		
 	//"Mano duomenys"
 	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(4) > a")
@@ -66,6 +93,59 @@ public class MainParentPage extends AbstractPage {
 	@FindBy(css = "#root > div > div > div > div:nth-child(1) > div > form > div.form-group.m-3 > div")
 	private WebElement updatePersonalData;
 	
+	//parent creates child's registration form
+	@FindBy(css = "#root > div > div > div:nth-child(1) > div > a")
+	private WebElement clickFormUpload;
+	
+	@FindBy(css = "#root > div > div > div:nth-child(3) > div > table > tbody > tr > td:nth-child(7) > div.btn-group > button.btn.btn-success")
+	private WebElement uploadFile;
+	
+	@FindBy(id = "vardasAtstovas1")
+	private WebElement addParentName;
+	
+	@FindBy(id = "pavardeAtstovas1")
+	private WebElement addParentLastname;
+	
+	@FindBy(id = "kodasAtstovas1")
+	private WebElement inputParentID;
+	
+	@FindBy(id = "adresasAtstovas1")
+	private WebElement inputParentAddress;
+	
+	@FindBy(id = "miestasAtstovas1")
+	private WebElement inputParentCity;
+	
+	@FindBy(id = "telAtstovas1")
+	private WebElement inputParentNumber;
+	
+	@FindBy(xpath = "//*[@id=\"elpastasAtstovas1\"]")
+	private WebElement inputParentEmail;
+	
+	@FindBy(id = "vaikoVardas")
+	private WebElement inputChildName;
+	
+	@FindBy(id = "vaikoPavarde")
+	private WebElement inputChildLastname;
+	
+	@FindBy(id = "vaikoKodas")
+	private WebElement inputChildID;
+	
+	@FindBy(id = "gimimoData")
+	private WebElement inputBirthdate;
+	
+	@FindBy(id= "vaikoAdresas")
+	private WebElement inputChildAddress;
+	
+	@FindBy(id = "vaikoMiestas")
+	private WebElement inputChildCity;
+	
+	@FindBy(css = "#root > div > div > form > button.btn.btn-success.my-5")
+	private WebElement submitButton;
+	
+	@FindBy(css = "#root > div > div > div:nth-child(3) > div > table > tbody > tr > td:nth-child(7) > div.form-group > div")
+	private WebElement textSuccessfulPdfUpload;
+	
+	
 	public MainParentPage(WebDriver driver) {
 		super(driver);
 	}
@@ -75,6 +155,12 @@ public class MainParentPage extends AbstractPage {
 	public void doParentLogin() {
 		inputUsername.sendKeys(username);
 		inputPassword.sendKeys(password);
+		loginButton.click();
+	}
+	
+	public void doParentLoginUploadTest() {
+		inputUsername.sendKeys(parentUsername);
+		inputPassword.sendKeys(parentUsername);
 		loginButton.click();
 	}
 	
@@ -123,7 +209,7 @@ public class MainParentPage extends AbstractPage {
 	
 	public void addParentEmail() {
 		inputEmail.clear();
-		inputEmail.sendKeys(email);
+		inputEmail.sendKeys(parentEmail);
 	}
 	
 	public void clickUpdateMyDataButton() {
@@ -133,5 +219,118 @@ public class MainParentPage extends AbstractPage {
 	public String textUpdateData() {
 		return updatePersonalData.getText();
 	}
-
+	
+	//admin creates parent
+	public void addParentUsername() {
+		inputParentName.sendKeys(parentUsername);
+	}
+	
+	public void selectParent() {
+		selectParent.click();
+	}
+	
+	public void clickCreateButton() {
+		clickCreate.click();
+	}
+	
+	//parent creates child's registration form
+	public void clickFormUploadButton() {
+		clickFormUpload.click();
+	}
+	
+	public void addParentNameInput() {
+		addParentName.clear();
+		addParentName.sendKeys(parentName);
+	}
+	
+	public void addParentLastnameInput() {
+		addParentLastname.clear();
+		addParentLastname.sendKeys(parentLastname);
+	}
+	
+	public void addParentID () {
+		inputParentID.clear();
+		inputParentID.sendKeys(parentID);
+	}
+	
+	public void addParentAddress() {
+	inputParentAddress.clear();
+	inputParentAddress.sendKeys(parentAddress);
+	}
+	
+	public void addParentCity() {
+		inputParentCity.clear();
+		inputParentCity.sendKeys(parentCity);
+	}
+	
+	public void addParentNumber() {
+		inputParentNumber.clear();
+		inputParentNumber.sendKeys(mobilephone);
+	}
+	
+	public void addParentEmailInput() {
+		inputParentEmail.clear();
+		inputParentEmail.sendKeys(email);
+	}
+	
+	public void addChildName() {
+		inputChildName.clear();
+		inputChildName.sendKeys(name);
+	}
+	
+	public void addChildLastname() {
+		inputChildLastname.clear();
+		inputChildLastname.sendKeys(lastname);
+	}
+	
+	public void addChildId() {
+		inputChildID.clear();
+		inputChildID.sendKeys(parentID);
+	}
+	
+	public void addBirthdateInput() {
+		inputBirthdate.sendKeys(birthdate);
+	}
+	
+	public void addChildAddress () {
+		inputChildAddress.sendKeys(parentAddress);
+	}
+	
+	public void addChildCity () {
+		inputChildCity.sendKeys(parentCity);
+	}
+	
+	public void selectKindergarten() {
+		   List<WebElement> kindergartensElems = driver.findElements(ByTagName.xpath("//*[@id=\"kindergarten1\"]//option"));
+		   
+		    int maxKindergartens = kindergartensElems.size();
+		    Random random = new Random();
+		  //  int randomKindergarten = random.nextInt(maxKindergartens);
+		    int randomKindergarten = random.ints(1, maxKindergartens+1).findFirst().getAsInt();
+		    kindergartensElems.get(randomKindergarten).click();
+		    
+	}
+	
+	public void selectPriorities() {
+		   List<WebElement> optionsElems = driver.findElements(By.xpath("//*[@id=\"root\"]/div/div/form/div[6]/div/div[1]//input"));
+		    int maxOptions = optionsElems.size();
+		    Random random = new Random();
+		    int randomOption = random.nextInt(maxOptions);
+		    optionsElems.get(randomOption).click();
+	}
+	
+	public void clickSubmitButton() {
+		submitButton.click();
+	}
+//upload PDF methods
+	public void clickPdfUploadButton() {
+		uploadPdfButton.click();
+		uploadPdfButton.sendKeys("C:/Users/Radvile/eclipse-workspace/Projektas_darzelio_first/src/test/resources/Test_PDF.pdf");
+		uploadFile.click();
+	}
+	
+	public String gettextSuccessfulPdfUploadText() {
+		return textSuccessfulPdfUpload.getText();
+	
+	}
 }

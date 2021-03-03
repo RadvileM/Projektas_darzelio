@@ -18,7 +18,7 @@ public class SpecialistPageTest extends BaseTest {
 	  Thread.sleep(3000);
 	  
 		String actualLoginText = specialistPage.textSuccessfulSpecialistLogin();
-		String expectedLoginText = "TomasMikalauskas" + "\n" + "Švietimo specialistas";
+		String expectedLoginText = "TomasMikalauskas" + "\n" + "Ðvietimo specialistas";
 		assertEquals(actualLoginText, expectedLoginText);		
   }
   
