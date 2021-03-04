@@ -18,8 +18,6 @@ public class MainParentPage extends AbstractPage {
 	private String lastname = "Adomaitis";
 	private String mobilephone = "12345678";
 	private String email = "marius@adomaitis" + rand.nextInt(100) + ".lt";
-	private String usernameUploadTest = "AtstovasTest";
-	private String passwordUploadTest = "AtstovasTest";
 	private String parentUsername = "Atstovas" + rand.nextInt(1000);
 	private String parentName = "Vardenis";
 	private String parentLastname = "Pavardenis";
@@ -67,6 +65,8 @@ public class MainParentPage extends AbstractPage {
 	//upload PDF button
 	@FindBy(css = "#root > div > div > div:nth-child(3) > div > table > tbody > tr > td:nth-child(7) > div.btn-group > button.btn.btn-secondary")
 	private WebElement uploadPdfButton;
+	
+	
 	
 	//admin selects the parent button
 	@FindBy(id = "ROLE_PARENT")
@@ -144,6 +144,7 @@ public class MainParentPage extends AbstractPage {
 	
 	@FindBy(css = "#root > div > div > div:nth-child(3) > div > table > tbody > tr > td:nth-child(7) > div.form-group > div")
 	private WebElement textSuccessfulPdfUpload;
+	
 	
 	
 	public MainParentPage(WebDriver driver) {
@@ -323,12 +324,18 @@ public class MainParentPage extends AbstractPage {
 		submitButton.click();
 	}
 //upload PDF methods
+	
+
+//	public void clickPdfUploadButton() {
+//		uploadPdfButton.click();
+//		uploadPdfButton.sendKeys("C:/Users/Radvile/eclipse-workspace/Projektas_darzelio_first/src/test/resources/Test_PDF.pdf");
+//		uploadFile.click();
+//	}
+	
 	public void clickPdfUploadButton() {
-		uploadPdfButton.click();
-		uploadPdfButton.sendKeys("C:/Users/Radvile/eclipse-workspace/Projektas_darzelio_first/src/test/resources/Test_PDF.pdf");
 		uploadFile.click();
 	}
-	
+		
 	public String gettextSuccessfulPdfUploadText() {
 		return textSuccessfulPdfUpload.getText();
 	
