@@ -67,7 +67,7 @@ public class ChildRegistrationTest extends BaseTest{
 		  js.executeScript("document.querySelector('#files').style ='';");
 		 
 		  
-		driver.findElement(By.id("files")).sendKeys("C:\\Users\\Gintare\\Desktop\\Medicinine_pazyma.pdf");
+		driver.findElement(By.id("files")).sendKeys("C:\\Users\\Radvile\\Desktop\\Test_PDF.pdf");
 	
 	
 	parentPage.clickPdfUploadButton();
@@ -75,8 +75,7 @@ public class ChildRegistrationTest extends BaseTest{
 	
 	//assert the text
 	String actualUpdateDataText = parentPage.gettextSuccessfulPdfUploadText();
-	String expectedUpdateDataText = "Failas įkeltas sėkmingai!";
-	assertEquals(actualUpdateDataText, expectedUpdateDataText);
+	assertEquals(true, actualUpdateDataText.contains("Failas įkeltas sėkmingai"));
 		
 }
 

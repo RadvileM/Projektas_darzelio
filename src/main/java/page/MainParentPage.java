@@ -142,7 +142,7 @@ public class MainParentPage extends AbstractPage {
 	@FindBy(css = "#root > div > div > form > button.btn.btn-success.my-5")
 	private WebElement submitButton;
 	
-	@FindBy(css = "#root > div > div > div:nth-child(3) > div > table > tbody > tr > td:nth-child(7) > div.form-group > div")
+	@FindBy(xpath= "//*[text()='Failas įkeltas sėkmingai!']")
 	private WebElement textSuccessfulPdfUpload;
 	
 	
@@ -324,22 +324,15 @@ public class MainParentPage extends AbstractPage {
 		submitButton.click();
 	}
 //upload PDF methods
-<<<<<<< HEAD
-	public void clickPdfUploadButton() throws InterruptedException {
-		uploadPdfButton.click();
-		uploadPdfButton.sendKeys("C:\\Users\\Radvile\\eclipse-workspace\\Projektas_darzelio_first\\src\\test\\resources\\Test_PDF.pdf");
-		Thread.sleep(1000);
-=======
-	
 
-//	public void clickPdfUploadButton() {
-//		uploadPdfButton.click();
-//		uploadPdfButton.sendKeys("C:/Users/Radvile/eclipse-workspace/Projektas_darzelio_first/src/test/resources/Test_PDF.pdf");
-//		uploadFile.click();
-//	}
+//	public void clickPdfUploadButton() throws InterruptedException {
+	//	uploadPdfButton.click();
+	//	uploadPdfButton.sendKeys("C:\\Users\\Radvile\\eclipse-workspace\\Projektas_darzelio_first\\src\\test\\resources\\Test_PDF.pdf");
+	//	Thread.sleep(1000);
+	//}
+	
 	
 	public void clickPdfUploadButton() {
->>>>>>> 4ba8b56d42a820a9ec4a456caf7ac288745fd38a
 		uploadFile.click();
 	}
 		
