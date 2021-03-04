@@ -323,9 +323,10 @@ public class MainParentPage extends AbstractPage {
 		submitButton.click();
 	}
 //upload PDF methods
-	public void clickPdfUploadButton() {
+	public void clickPdfUploadButton() throws InterruptedException {
 		uploadPdfButton.click();
-		uploadPdfButton.sendKeys("C:/Users/Radvile/eclipse-workspace/Projektas_darzelio_first/src/test/resources/Test_PDF.pdf");
+		uploadPdfButton.sendKeys("C:\\Users\\Radvile\\eclipse-workspace\\Projektas_darzelio_first\\src\\test\\resources\\Test_PDF.pdf");
+		Thread.sleep(1000);
 		uploadFile.click();
 	}
 	
