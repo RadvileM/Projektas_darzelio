@@ -2,6 +2,10 @@ package Tests;
 
 import static org.testng.Assert.assertEquals;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import BaseTest.BaseTest;
@@ -9,6 +13,7 @@ import page.MainAdminPage;
 import page.MainParentPage;
 
 public class ChildRegistrationTest extends BaseTest{
+
 	
 	@Test
 	public void pdfUploadTest () throws InterruptedException {
@@ -57,11 +62,20 @@ public class ChildRegistrationTest extends BaseTest{
 		Thread.sleep(2000);
 		
 		//pdf upload
+		
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+		  js.executeScript("document.querySelector('#files').style ='';");
+		 
+		  
+		driver.findElement(By.id("files")).sendKeys("C:\\Users\\Gintare\\Desktop\\Medicinine_pazyma.pdf");
+	
+	
 	parentPage.clickPdfUploadButton();
+	Thread.sleep(2000);
 	
 	//assert the text
 	String actualUpdateDataText = parentPage.gettextSuccessfulPdfUploadText();
-	String expectedUpdateDataText = "Failas ákeltas sëkmingai!";
+	String expectedUpdateDataText = "Failas Ä¯keltas sÄ—kmingai!";
 	assertEquals(actualUpdateDataText, expectedUpdateDataText);
 		
 }

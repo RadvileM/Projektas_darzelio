@@ -2,6 +2,7 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2021-03-03T19:50:18 EET" name="Default suite" finished-at="2021-03-03T19:50:33 EET" duration-ms="14780">
     <groups>
     </groups>
@@ -57,6 +58,37 @@ at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invok
 at com.sun.proxy.$Proxy13.click(Unknown Source)
 at page.MainParentPage.clickFormUploadButton(MainParentPage.java:238)
 at Tests.ChildRegistrationTest.pdfUploadTest(ChildRegistrationTest.java:37)
+=======
+  <suite started-at="2021-03-04T09:56:40 EET" name="Default suite" finished-at="2021-03-04T09:57:01 EET" duration-ms="21786">
+    <groups>
+    </groups>
+    <test started-at="2021-03-04T09:56:40 EET" name="Default test" finished-at="2021-03-04T09:57:01 EET" duration-ms="21786">
+      <class name="Tests.ChildRegistrationTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.ChildRegistrationTest@306cf3ea]" started-at="2021-03-04T09:56:40 EET" name="setUp" finished-at="2021-03-04T09:56:40 EET" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.ChildRegistrationTest@306cf3ea]" started-at="2021-03-04T09:56:40 EET" name="openHomePage" finished-at="2021-03-04T09:56:43 EET" duration-ms="3313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openHomePage -->
+        <test-method signature="pdfUploadTest()[pri:0, instance:Tests.ChildRegistrationTest@306cf3ea]" started-at="2021-03-04T09:56:43 EET" name="pdfUploadTest" finished-at="2021-03-04T09:57:01 EET" duration-ms="18378" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Failas įkeltas sėkmingai!] but found [×
+Failas įkeltas sėkmingai!]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Failas įkeltas sėkmingai!] but found [×
+Failas įkeltas sėkmingai!]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at Tests.ChildRegistrationTest.pdfUploadTest(ChildRegistrationTest.java:79)
+>>>>>>> 4ba8b56d42a820a9ec4a456caf7ac288745fd38a
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -87,11 +119,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pdfUploadTest -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.ChildRegistrationTest@3a6bb9bf]" started-at="2021-03-03T19:50:32 EET" name="tearDown" finished-at="2021-03-03T19:50:33 EET" duration-ms="389" status="PASS">
+=======
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.ChildRegistrationTest@306cf3ea]" started-at="2021-03-04T09:57:01 EET" name="tearDown" finished-at="2021-03-04T09:57:01 EET" duration-ms="15" status="PASS">
+>>>>>>> 4ba8b56d42a820a9ec4a456caf7ac288745fd38a
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
