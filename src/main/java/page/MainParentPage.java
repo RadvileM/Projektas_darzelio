@@ -21,11 +21,11 @@ public class MainParentPage extends AbstractPage {
 	private String parentUsername = "Atstovas" + rand.nextInt(1000);
 	private String parentName = "Vardenis";
 	private String parentLastname = "Pavardenis";
-	private String parentID = "12345678" + rand.nextInt(1000);
+	private String parentID = "12345678" + (rand.nextInt(900) + 100);
 	private String parentAddress = "Ukmerges g. 19";
 	private String parentCity = "Vilnius";
 	private String parentEmail = "test@test.lt";
-	private String childID = "3234567" + rand.nextInt(10000);
+	private String childID = "3234567" + (rand.nextInt(9000) + 1000);
 	private String birthdate = "09122016";
 	
 	
