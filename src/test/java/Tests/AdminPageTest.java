@@ -2,18 +2,16 @@ package Tests;
 
 import static org.testng.Assert.assertEquals;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import BaseTest.BaseTest;
-import Utils.WaitUtils;
 import page.MainAdminPage;
 
 public class AdminPageTest extends BaseTest{
 
 	
 
-	@Test
+	@Test(groups = "smoke")
 	public void mainPageTest () throws InterruptedException {
 		MainAdminPage mainPage = new MainAdminPage(driver);
 		

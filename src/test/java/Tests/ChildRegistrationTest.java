@@ -4,8 +4,6 @@ import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import BaseTest.BaseTest;
@@ -15,7 +13,7 @@ import page.MainParentPage;
 public class ChildRegistrationTest extends BaseTest{
 
 	
-	@Test
+	@Test(groups = "regression")
 	public void pdfUploadTest () throws InterruptedException {
 	
 		MainAdminPage adminPage = new MainAdminPage(driver);
@@ -67,10 +65,16 @@ public class ChildRegistrationTest extends BaseTest{
 		  js.executeScript("document.querySelector('#files').style ='';");
 		 
 		  
+<<<<<<< HEAD
 		driver.findElement(By.id("files")).sendKeys("C:\\Users\\Radvile\\Desktop\\Test_PDF.pdf");
 //FIX THIS!!!	//	driver.findElement(By.id("files")).sendKeys("..\\src\\test\\resources\\Test_PDF.pdf");
 	
+=======
+		driver.findElement(By.id("files")).sendKeys("C:\\Users\\Gintare\\Desktop\\Medicinine_pazyma.pdf");
+		// sendKeys("C:\\Users\\Radvile\\Desktop\\Test_PDF.pdf");
+>>>>>>> 4ff613108bd70c3bd8851f8888d4ac4551144a0a
 	
+
 	parentPage.clickPdfUploadButton();
 	Thread.sleep(2000);
 	

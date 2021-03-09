@@ -5,18 +5,16 @@ import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
 
 import BaseTest.BaseTest;
-import Utils.WaitUtils;
 import page.MainParentPage;
 
 public class ParentPageTest extends BaseTest{
 	
 		
-	@Test
+	@Test(groups = "smoke")
 	public void parentLoginPageTest () throws InterruptedException {
 		MainParentPage parentPage = new MainParentPage(driver);
 		
 		parentPage.doParentLogin();
-		Thread.sleep(3000);
 		
 		//paimam teksta, tikrinam ar prisijungimas sekmingas
 		String actualLoginText = parentPage.textSuccessfulParentLogin();
@@ -24,12 +22,11 @@ public class ParentPageTest extends BaseTest{
 		assertEquals(expectedLoginText, actualLoginText);
 		}
 
-	@Test
+	@Test(groups = "smoke")
 	public void parentLogoutTest () throws InterruptedException {		
 		MainParentPage parentPage = new MainParentPage(driver);
 		
 		parentPage.doParentLogin();
-		Thread.sleep(3000);
 		parentPage.doParentLogout();
 
 		String actualLogoutText = parentPage.textSuccessfulParentLogout();
