@@ -9,7 +9,7 @@ import BaseTest.BaseTest;
 import page.MainParentPage;
 
 public class ParentAddPersonalDataTest extends BaseTest {
-  @Test
+  @Test(groups = "regression")
   public void parentAddPersonalDataTest() throws InterruptedException {
 	  MainParentPage parentPage = new MainParentPage(driver);
 	  

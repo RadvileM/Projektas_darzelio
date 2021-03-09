@@ -1,29 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="12" total="17" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-09T13:17:08 EET" name="Default suite" finished-at="2021-03-09T13:17:15 EET" duration-ms="6447">
+  <suite started-at="2021-03-09T15:42:25 EET" name="RegressionTests" finished-at="2021-03-09T15:43:10 EET" duration-ms="44411">
     <groups>
+      <group name="regression">
+        <method signature="ChildRegistrationTest.pdfUploadTest()[pri:2, instance:Tests.ChildRegistrationTest@34f7cfd9]" name="pdfUploadTest" class="Tests.ChildRegistrationTest"/>
+        <method signature="KindergartenAddToList.uploadKindergarenToList()[pri:5, instance:Tests.KindergartenAddToList@65f095f8]" name="uploadKindergarenToList" class="Tests.KindergartenAddToList"/>
+        <method signature="ParentAddPersonalDataTest.parentAddPersonalDataTest()[pri:1, instance:Tests.ParentAddPersonalDataTest@59af0466]" name="parentAddPersonalDataTest" class="Tests.ParentAddPersonalDataTest"/>
+        <method signature="SpecialistAddPersonalDataTest.specialistAddPersonalDataTest()[pri:3, instance:Tests.SpecialistAddPersonalDataTest@3e6ef8ad]" name="specialistAddPersonalDataTest" class="Tests.SpecialistAddPersonalDataTest"/>
+        <method signature="SpecialistPasswordChangeTest.specialistPasswordChangeTest()[pri:4, instance:Tests.SpecialistPasswordChangeTest@346d61be]" name="specialistPasswordChangeTest" class="Tests.SpecialistPasswordChangeTest"/>
+      </group> <!-- regression -->
     </groups>
-    <test started-at="2021-03-09T13:17:08 EET" name="Default test" finished-at="2021-03-09T13:17:15 EET" duration-ms="6447">
-      <class name="Tests.ParentAddPersonalDataTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.ParentAddPersonalDataTest@3541cb24]" started-at="2021-03-09T13:17:08 EET" name="setUp" finished-at="2021-03-09T13:17:08 EET" duration-ms="12" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.ParentAddPersonalDataTest@3541cb24]" started-at="2021-03-09T13:17:08 EET" name="openHomePage" finished-at="2021-03-09T13:17:12 EET" duration-ms="3486" status="PASS">
+    <test started-at="2021-03-09T15:42:25 EET" name="regression" finished-at="2021-03-09T15:43:10 EET" duration-ms="44411">
+      <class name="Tests.ChildRegistrationTest">
+        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.ChildRegistrationTest@34f7cfd9]" started-at="2021-03-09T15:42:25 EET" name="openHomePage" finished-at="2021-03-09T15:42:28 EET" duration-ms="3251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openHomePage -->
-        <test-method signature="parentAddPersonalDataTest()[pri:0, instance:Tests.ParentAddPersonalDataTest@3541cb24]" started-at="2021-03-09T13:17:12 EET" name="parentAddPersonalDataTest" finished-at="2021-03-09T13:17:15 EET" duration-ms="2897" status="PASS">
+        <test-method signature="pdfUploadTest()[pri:2, instance:Tests.ChildRegistrationTest@34f7cfd9]" started-at="2021-03-09T15:42:28 EET" name="pdfUploadTest" finished-at="2021-03-09T15:42:46 EET" duration-ms="17263" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pdfUploadTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.ChildRegistrationTest@34f7cfd9]" started-at="2021-03-09T15:42:46 EET" name="tearDown" finished-at="2021-03-09T15:42:46 EET" duration-ms="304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.ChildRegistrationTest -->
+      <class name="Tests.ParentAddPersonalDataTest">
+        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.ParentAddPersonalDataTest@59af0466]" started-at="2021-03-09T15:42:51 EET" name="openHomePage" finished-at="2021-03-09T15:42:54 EET" duration-ms="2878" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openHomePage -->
+        <test-method signature="parentAddPersonalDataTest()[pri:1, instance:Tests.ParentAddPersonalDataTest@59af0466]" started-at="2021-03-09T15:42:54 EET" name="parentAddPersonalDataTest" finished-at="2021-03-09T15:42:56 EET" duration-ms="2683" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- parentAddPersonalDataTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.ParentAddPersonalDataTest@3541cb24]" started-at="2021-03-09T13:17:15 EET" name="tearDown" finished-at="2021-03-09T13:17:15 EET" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.ParentAddPersonalDataTest@59af0466]" started-at="2021-03-09T15:42:56 EET" name="tearDown" finished-at="2021-03-09T15:42:57 EET" duration-ms="132" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Tests.ParentAddPersonalDataTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="Tests.SpecialistAddPersonalDataTest">
+        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.SpecialistAddPersonalDataTest@3e6ef8ad]" started-at="2021-03-09T15:42:57 EET" name="openHomePage" finished-at="2021-03-09T15:43:00 EET" duration-ms="3023" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openHomePage -->
+        <test-method signature="specialistAddPersonalDataTest()[pri:3, instance:Tests.SpecialistAddPersonalDataTest@3e6ef8ad]" started-at="2021-03-09T15:43:00 EET" name="specialistAddPersonalDataTest" finished-at="2021-03-09T15:43:02 EET" duration-ms="2802" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- specialistAddPersonalDataTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.SpecialistAddPersonalDataTest@3e6ef8ad]" started-at="2021-03-09T15:43:02 EET" name="tearDown" finished-at="2021-03-09T15:43:03 EET" duration-ms="200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.SpecialistAddPersonalDataTest -->
+      <class name="Tests.SpecialistPasswordChangeTest">
+        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.SpecialistPasswordChangeTest@346d61be]" started-at="2021-03-09T15:43:03 EET" name="openHomePage" finished-at="2021-03-09T15:43:06 EET" duration-ms="2999" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openHomePage -->
+        <test-method signature="specialistPasswordChangeTest()[pri:4, instance:Tests.SpecialistPasswordChangeTest@346d61be]" started-at="2021-03-09T15:43:06 EET" name="specialistPasswordChangeTest" finished-at="2021-03-09T15:43:09 EET" duration-ms="3620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- specialistPasswordChangeTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.SpecialistPasswordChangeTest@346d61be]" started-at="2021-03-09T15:43:09 EET" name="tearDown" finished-at="2021-03-09T15:43:10 EET" duration-ms="316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.SpecialistPasswordChangeTest -->
+      <class name="Tests.AdminPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.AdminPageTest@26275bef]" started-at="2021-03-09T15:42:25 EET" name="setUp" finished-at="2021-03-09T15:42:25 EET" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+      </class> <!-- Tests.AdminPageTest -->
+      <class name="Tests.KindergartenAddToList">
+        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.KindergartenAddToList@65f095f8]" started-at="2021-03-09T15:42:46 EET" name="openHomePage" finished-at="2021-03-09T15:42:49 EET" duration-ms="3103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openHomePage -->
+        <test-method signature="uploadKindergarenToList()[pri:5, instance:Tests.KindergartenAddToList@65f095f8]" started-at="2021-03-09T15:42:49 EET" name="uploadKindergarenToList" finished-at="2021-03-09T15:42:51 EET" duration-ms="1594" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadKindergarenToList -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.KindergartenAddToList@65f095f8]" started-at="2021-03-09T15:42:51 EET" name="tearDown" finished-at="2021-03-09T15:42:51 EET" duration-ms="149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.KindergartenAddToList -->
+    </test> <!-- regression -->
+  </suite> <!-- RegressionTests -->
 </testng-results>

@@ -11,7 +11,7 @@ public class AdminPageTest extends BaseTest{
 
 	
 
-	@Test
+	@Test(groups = "smoke")
 	public void mainPageTest () throws InterruptedException {
 		MainAdminPage mainPage = new MainAdminPage(driver);
 		

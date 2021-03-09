@@ -10,7 +10,7 @@ import page.MainParentPage;
 public class ParentPageTest extends BaseTest{
 	
 		
-	@Test
+	@Test(groups = "smoke")
 	public void parentLoginPageTest () throws InterruptedException {
 		MainParentPage parentPage = new MainParentPage(driver);
 		
@@ -22,7 +22,7 @@ public class ParentPageTest extends BaseTest{
 		assertEquals(expectedLoginText, actualLoginText);
 		}
 
-	@Test
+	@Test(groups = "smoke")
 	public void parentLogoutTest () throws InterruptedException {		
 		MainParentPage parentPage = new MainParentPage(driver);
 		

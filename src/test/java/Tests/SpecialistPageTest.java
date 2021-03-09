@@ -11,7 +11,7 @@ public class SpecialistPageTest extends BaseTest {
 	
 	
 	
-  @Test
+  @Test(groups = "smoke")
   public void specialistLoginPageTest() throws InterruptedException {
 	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
 	  
@@ -22,7 +22,7 @@ public class SpecialistPageTest extends BaseTest {
 		assertEquals(actualLoginText, expectedLoginText);		
   }
   
-  @Test
+  @Test(groups = "smoke")
   public void specialistLogoutPageTest() throws InterruptedException {
 	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
 	  

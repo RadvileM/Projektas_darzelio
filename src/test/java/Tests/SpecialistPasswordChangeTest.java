@@ -11,7 +11,7 @@ import page.SpecialistPasswordChange;
 
 public class SpecialistPasswordChangeTest extends BaseTest{
 
-	@Test
+	@Test(groups = "regression")
 	public void specialistPasswordChangeTest() throws InterruptedException {
 		
 	SpecialistPasswordChange passwordChange = new SpecialistPasswordChange(driver);

@@ -10,8 +10,8 @@ import page.MainSpecialistPage;
 
 public class KindergartenAddToList extends BaseTest {
 	
-  @Test
-  public void f() {
+  @Test(groups = "regression")
+  public void uploadKindergarenToList() {
 	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
 	  KindergartensPage kindergartensPage = new KindergartensPage(driver);
 	  

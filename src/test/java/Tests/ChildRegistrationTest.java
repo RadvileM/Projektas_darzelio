@@ -13,7 +13,7 @@ import page.MainParentPage;
 public class ChildRegistrationTest extends BaseTest{
 
 	
-	@Test
+	@Test(groups = "regression")
 	public void pdfUploadTest () throws InterruptedException {
 	
 		MainAdminPage adminPage = new MainAdminPage(driver);

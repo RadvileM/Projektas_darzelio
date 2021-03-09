@@ -11,13 +11,13 @@ public abstract class BaseTest {
 	
 	protected static WebDriver driver;
 	
-	@BeforeTest
+	@BeforeTest(alwaysRun = true)
 	public static void setUp() {
 		System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
 	}
 	
 	
-	@BeforeMethod
+	@BeforeMethod (alwaysRun = true)
 	public void openHomePage(){
 		//System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
 		driver = new ChromeDriver();
@@ -27,9 +27,9 @@ public abstract class BaseTest {
 	
 
 
-	@AfterMethod
+	@AfterMethod (alwaysRun = true)
 	public static void tearDown() {
 		driver.manage().deleteAllCookies();
-		//driver.close();
+		driver.close();
 	}
 }
