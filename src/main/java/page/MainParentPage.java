@@ -8,8 +8,12 @@ import org.openqa.selenium.By.ByTagName;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainParentPage extends AbstractPage {	
+	 WebDriverWait wait = new WebDriverWait(driver, 3);
+		
 	Random rand = new Random();
 	
 	private String username = "MariusAdomaitis";
@@ -17,14 +21,14 @@ public class MainParentPage extends AbstractPage {
 	private String name = "Marius";
 	private String lastname = "Adomaitis";
 	private String mobilephone = "12345678";
-	private String email = "marius@adomaitis" + rand.nextInt(100) + ".lt";
+	private String email = "marius@adomaitis" + rand.nextInt(1000) + ".lt";
 	private String parentUsername = "Atstovas" + rand.nextInt(1000);
 	private String parentName = "Vardenis";
 	private String parentLastname = "Pavardenis";
 	private String parentID = "12345678" + rand.nextInt(1000);
 	private String parentAddress = "Ukmerges g. 19";
 	private String parentCity = "Vilnius";
-	private String parentEmail = "test@test.lt";
+	private String parentEmail = "marius@adomaitis" + rand.nextInt(1000) + ".lt";
 	private String childID = "3234567" + rand.nextInt(10000);
 	private String birthdate = "09122016";
 	
@@ -157,6 +161,8 @@ public class MainParentPage extends AbstractPage {
 		inputUsername.sendKeys(username);
 		inputPassword.sendKeys(password);
 		loginButton.click();
+		  wait.until(
+		          ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > nav > div:nth-child(3) > li:nth-child(4) > a")));
 	}
 	
 	public void doParentLoginUploadTest() {
@@ -165,14 +171,6 @@ public class MainParentPage extends AbstractPage {
 		loginButton.click();
 	}
 	
-
-	//public void addInputParentPassword() {
-	//	inputPassword.sendKeys(password);
-	//}
-
-	//public void clickLoginButton() {
-	//	loginButton.click();
-	//}
 	
 	public void doParentLogout() {
 		logoutButton.click();
@@ -189,6 +187,8 @@ public class MainParentPage extends AbstractPage {
 	//Mano duomenys
 	public void clickMyDataButton() {
 		myDataButton.click();
+		 wait.until(
+				 ExpectedConditions.presenceOfElementLocated(By.id("Vardas")));
 	}
 	
 	// add Parent personal data
@@ -215,10 +215,11 @@ public class MainParentPage extends AbstractPage {
 	
 	public void clickUpdateMyDataButton() {
 		updateMyDataButton.click();
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > div > div > div:nth-child(1) > div > form > div.form-group.m-3 > div")));
 	}
 	
 	public String textUpdateData() {
-		return updatePersonalData.getText();
+		return updatePersonalData.getText();	
 	}
 	
 	//admin creates parent
@@ -323,13 +324,6 @@ public class MainParentPage extends AbstractPage {
 	public void clickSubmitButton() {
 		submitButton.click();
 	}
-//upload PDF methods
-
-//	public void clickPdfUploadButton() throws InterruptedException {
-	//	uploadPdfButton.click();
-	//	uploadPdfButton.sendKeys("C:\\Users\\Radvile\\eclipse-workspace\\Projektas_darzelio_first\\src\\test\\resources\\Test_PDF.pdf");
-	//	Thread.sleep(1000);
-	//}
 	
 	
 	public void clickPdfUploadButton() {

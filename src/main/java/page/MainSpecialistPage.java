@@ -2,12 +2,18 @@ package page;
 
 import java.util.Random;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainSpecialistPage extends AbstractPage {
+	 WebDriverWait wait = new WebDriverWait(driver, 3);
+		
 	Random rand = new Random();
+	
 	
 	private String username = "TomasMikalauskas";
 	private String password = "TomasMikalauskas";
@@ -79,6 +85,9 @@ public class MainSpecialistPage extends AbstractPage {
 		inputUsername.sendKeys(username);
 		inputPassword.sendKeys(password);
 		loginButton.click();
+		  wait.until(
+		          ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > nav > div:nth-child(3) > li:nth-child(6) > a")));
+		   
 	}
 	
 
@@ -126,6 +135,7 @@ public class MainSpecialistPage extends AbstractPage {
 	
 	public void clickUpdateMyDataButton() {
 		updateMyDataButton.click();
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > div > div > div:nth-child(1) > div > form > div.form-group.m-3 > div")));
 	}
 	
 	public String textUpdateData() {

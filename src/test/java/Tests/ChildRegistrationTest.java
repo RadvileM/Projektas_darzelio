@@ -4,8 +4,6 @@ import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import BaseTest.BaseTest;
@@ -67,9 +65,10 @@ public class ChildRegistrationTest extends BaseTest{
 		  js.executeScript("document.querySelector('#files').style ='';");
 		 
 		  
-		driver.findElement(By.id("files")).sendKeys("C:\\Users\\Radvile\\Desktop\\Test_PDF.pdf");
+		driver.findElement(By.id("files")).sendKeys("C:\\Users\\Gintare\\Desktop\\Medicinine_pazyma.pdf");
+		// sendKeys("C:\\Users\\Radvile\\Desktop\\Test_PDF.pdf");
 	
-	
+
 	parentPage.clickPdfUploadButton();
 	Thread.sleep(2000);
 	

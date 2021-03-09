@@ -16,10 +16,9 @@ public class SpecialistPageTest extends BaseTest {
 	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
 	  
 	  specialistPage.doSpecialistLogin();
-	  Thread.sleep(3000);
 	  
 		String actualLoginText = specialistPage.textSuccessfulSpecialistLogin();
-		String expectedLoginText = "TomasMikalauskas" + "\n" + "Ðvietimo specialistas";
+		String expectedLoginText = "TomasMikalauskas" + "\n" + "Švietimo specialistas";
 		assertEquals(actualLoginText, expectedLoginText);		
   }
   
@@ -28,7 +27,6 @@ public class SpecialistPageTest extends BaseTest {
 	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
 	  
 	  specialistPage.doSpecialistLogin();
-	  Thread.sleep(3000);
 	  specialistPage.doSpecialistLogout();
 	  
 		String actualLoginText = specialistPage.textSuccessfulSpecialistLogout();

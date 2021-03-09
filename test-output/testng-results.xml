@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-04T20:13:39 EET" name="Default suite" finished-at="2021-03-04T20:14:05 EET" duration-ms="25376">
+  <suite started-at="2021-03-09T13:17:08 EET" name="Default suite" finished-at="2021-03-09T13:17:15 EET" duration-ms="6447">
     <groups>
     </groups>
-    <test started-at="2021-03-04T20:13:39 EET" name="Default test" finished-at="2021-03-04T20:14:05 EET" duration-ms="25376">
-      <class name="Tests.ChildRegistrationTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.ChildRegistrationTest@3a6bb9bf]" started-at="2021-03-04T20:13:39 EET" name="setUp" finished-at="2021-03-04T20:13:39 EET" duration-ms="14" status="PASS">
+    <test started-at="2021-03-09T13:17:08 EET" name="Default test" finished-at="2021-03-09T13:17:15 EET" duration-ms="6447">
+      <class name="Tests.ParentAddPersonalDataTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.ParentAddPersonalDataTest@3541cb24]" started-at="2021-03-09T13:17:08 EET" name="setUp" finished-at="2021-03-09T13:17:08 EET" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.ChildRegistrationTest@3a6bb9bf]" started-at="2021-03-04T20:13:39 EET" name="openHomePage" finished-at="2021-03-04T20:13:43 EET" duration-ms="3302" status="PASS">
+        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.ParentAddPersonalDataTest@3541cb24]" started-at="2021-03-09T13:17:08 EET" name="openHomePage" finished-at="2021-03-09T13:17:12 EET" duration-ms="3486" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openHomePage -->
-        <test-method signature="pdfUploadTest()[pri:0, instance:Tests.ChildRegistrationTest@3a6bb9bf]" started-at="2021-03-04T20:13:43 EET" name="pdfUploadTest" finished-at="2021-03-04T20:14:05 EET" duration-ms="22009" status="PASS">
+        <test-method signature="parentAddPersonalDataTest()[pri:0, instance:Tests.ParentAddPersonalDataTest@3541cb24]" started-at="2021-03-09T13:17:12 EET" name="parentAddPersonalDataTest" finished-at="2021-03-09T13:17:15 EET" duration-ms="2897" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- pdfUploadTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.ChildRegistrationTest@3a6bb9bf]" started-at="2021-03-04T20:14:05 EET" name="tearDown" finished-at="2021-03-04T20:14:05 EET" duration-ms="10" status="PASS">
+        </test-method> <!-- parentAddPersonalDataTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.ParentAddPersonalDataTest@3541cb24]" started-at="2021-03-09T13:17:15 EET" name="tearDown" finished-at="2021-03-09T13:17:15 EET" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Tests.ChildRegistrationTest -->
+      </class> <!-- Tests.ParentAddPersonalDataTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

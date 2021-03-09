@@ -8,7 +8,7 @@ import BaseTest.BaseTest;
 import page.MainSpecialistPage;
 import page.SpecialistPasswordChange;
 
-public class SpecialistAddPersonalData extends BaseTest {
+public class SpecialistAddPersonalDataTest extends BaseTest {
 	
 	
   @Test
@@ -18,12 +18,12 @@ public class SpecialistAddPersonalData extends BaseTest {
 	  
 	  //Specialist Login
 	 specialistPage.doSpecialistLogin();
-	 Thread.sleep(1000);
+	 //laukia elemento
 	 
 	 //Specialist click "Mano duomenys" adding new data
 	 
 	passwordChange.clickMyDataButton();
-	Thread.sleep(1000);
+	//laukia elemento
 	
 	specialistPage.addSpecialistName();
 	specialistPage.addSpecialistLastName();
@@ -31,8 +31,8 @@ public class SpecialistAddPersonalData extends BaseTest {
 	specialistPage.addSpecialistEmail();
 	
 	specialistPage.clickUpdateMyDataButton();
-	Thread.sleep(3000);
-	
+	//laukia elemento	
+
 	//assert to check if the data was updated
 	
 	String actualUpdateDataText = specialistPage.textUpdateData();

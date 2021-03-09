@@ -1,4 +1,4 @@
-package Utils;
+package utilities;
 
 import java.util.function.Function;
 
@@ -17,4 +17,6 @@ public class WaitUtils {
 }
 });
 	}
+	
+	
 }
