@@ -8,72 +8,15 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<<<<<<< HEAD
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">19 909</td><td></td><td></td></tr>
+<tr><th colspan="8">SmokeTests</th></tr>
+<tr><td><a href="#t0">smoke</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">23,972</td><td>smoke</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Tests.ChildRegistrationTest</td><td><a href="#m0">pdfUploadTest</a></td><td rowspan="1">1615310247297</td><td rowspan="1">16551</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">SmokeTests</th></tr></tbody><tbody id="t0"><tr><th colspan="4">smoke &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Tests.AdminPageTest</td><td><a href="#m0">mainPageTest</a></td><td rowspan="1">1615386661417</td><td rowspan="1">1217</td></tr><tr class="passedodd"><td rowspan="2">Tests.ParentPageTest</td><td><a href="#m1">parentLoginPageTest</a></td><td rowspan="1">1615386665797</td><td rowspan="1">896</td></tr><tr class="passedodd"><td><a href="#m2">parentLogoutTest</a></td><td rowspan="1">1615386669732</td><td rowspan="1">1198</td></tr><tr class="passedeven"><td rowspan="2">Tests.SpecialistPageTest</td><td><a href="#m3">specialistLoginPageTest</a></td><td rowspan="1">1615386674005</td><td rowspan="1">1003</td></tr><tr class="passedeven"><td><a href="#m4">specialistLogoutPageTest</a></td><td rowspan="1">1615386679937</td><td rowspan="1">1307</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">Tests.ChildRegistrationTest#pdfUploadTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : ..\src\test\resources\Test_PDF.pdf
-  (Session info: chrome=89.0.4389.72)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;RADVILESPC&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;11.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.72, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\Radvile\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:64194}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c6d732bfc18c2be4dabd5662e4468e57
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
-	at Tests.ChildRegistrationTest.pdfUploadTest(ChildRegistrationTest.java:71)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:764)
-	at org.testng.TestRunner.run(TestRunner.java:585)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.runSuites(TestNG.java:1069)
-	at org.testng.TestNG.run(TestNG.java:1037)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-=======
-<tr><th colspan="8">RegressionTests</th></tr>
-<tr><td><a href="#t0">regression</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">44,411</td><td>regression</td><td></td></tr>
-</table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">RegressionTests</th></tr></tbody><tbody id="t0"><tr><th colspan="4">regression &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Tests.ChildRegistrationTest</td><td><a href="#m0">pdfUploadTest</a></td><td rowspan="1">1615297348931</td><td rowspan="1">17263</td></tr><tr class="passedodd"><td rowspan="1">Tests.KindergartenAddToList</td><td><a href="#m1">uploadKindergarenToList</a></td><td rowspan="1">1615297369612</td><td rowspan="1">1594</td></tr><tr class="passedeven"><td rowspan="1">Tests.ParentAddPersonalDataTest</td><td><a href="#m2">parentAddPersonalDataTest</a></td><td rowspan="1">1615297374235</td><td rowspan="1">2683</td></tr><tr class="passedodd"><td rowspan="1">Tests.SpecialistAddPersonalDataTest</td><td><a href="#m3">specialistAddPersonalDataTest</a></td><td rowspan="1">1615297380075</td><td rowspan="1">2802</td></tr><tr class="passedeven"><td rowspan="1">Tests.SpecialistPasswordChangeTest</td><td><a href="#m4">specialistPasswordChangeTest</a></td><td rowspan="1">1615297386079</td><td rowspan="1">3620</td></tr></tbody>
-</table>
-<h2>regression</h2><h3 id="m0">Tests.ChildRegistrationTest#pdfUploadTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">Tests.KindergartenAddToList#uploadKindergarenToList</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">Tests.ParentAddPersonalDataTest#parentAddPersonalDataTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">Tests.SpecialistAddPersonalDataTest#specialistAddPersonalDataTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">Tests.SpecialistPasswordChangeTest#specialistPasswordChangeTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
->>>>>>> 4ff613108bd70c3bd8851f8888d4ac4551144a0a
+<h2>smoke</h2><h3 id="m0">Tests.AdminPageTest#mainPageTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Tests.ParentPageTest#parentLoginPageTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Tests.ParentPageTest#parentLogoutTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Tests.SpecialistPageTest#specialistLoginPageTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">Tests.SpecialistPageTest#specialistLogoutPageTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

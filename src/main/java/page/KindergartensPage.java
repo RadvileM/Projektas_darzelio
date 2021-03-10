@@ -31,7 +31,9 @@ public class KindergartensPage extends AbstractPage {
 	
 	
 	//text
-	@FindBy(xpath = "//div[@class='alert alert-success']")
+	@FindBy(xpath = "//*[@id=\"root\"]/div/div/div/div[1]/div[2]/div/table/tfoot/tr/td[2]/div/div")
+	//(xpath = "//div[@class='alert alert-success']")
+	
 	public WebElement textKindergartenAddedsuccessful;
 	
 	//methods
