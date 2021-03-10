@@ -32,7 +32,8 @@ public class SpecialistPasswordChange extends AbstractPage{
 	@FindBy( css = "#root > div > div > div > div > form > div:nth-child(2) > div > input")
 	private WebElement inputPassword;
 	
-	@FindBy(id = "Dabartinis slaptažodis")
+	@FindBy(xpath = "//input[@id='Dabartinis slaptažodis']")
+	//(id = "Dabartinis slaptažodis")
 	private WebElement oldPassword;
 	
 	@FindBy(id = "Naujas slaptažodis")

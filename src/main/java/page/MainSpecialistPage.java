@@ -36,7 +36,8 @@ public class MainSpecialistPage extends AbstractPage {
 	@FindBy (id = "Vardas")
 	private WebElement inputPersonalName;
 	
-	@FindBy (id = "Pavardė")
+	@FindBy (xpath = "//input[@id='Pavardė']")
+	//(id = "Pavardė")
 	private WebElement inputPersonalLastname;
 	
 	@FindBy (id = "Tel")

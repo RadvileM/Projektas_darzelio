@@ -146,7 +146,10 @@ public class MainParentPage extends AbstractPage {
 	@FindBy(css = "#root > div > div > form > button.btn.btn-success.my-5")
 	private WebElement submitButton;
 	
-	@FindBy(xpath= "//*[text()='Failas įkeltas sėkmingai!']")
+	@FindBy(xpath = "//div[text()='Failas įkeltas sėkmingai!']")
+	//(xpath= "//*[text()='Failas įkeltas sėkmingai!']")
+	
+	
 	private WebElement textSuccessfulPdfUpload;
 	
 	
