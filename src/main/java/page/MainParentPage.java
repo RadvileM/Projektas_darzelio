@@ -189,8 +189,7 @@ public class MainParentPage extends AbstractPage {
 	//Mano duomenys
 	public void clickMyDataButton() {
 		myDataButton.click();
-		 wait.until(
-				 ExpectedConditions.presenceOfElementLocated(By.id("Vardas")));
+		 wait.until(ExpectedConditions.presenceOfElementLocated(By.id("Vardas")));
 	}
 	
 	// add Parent personal data
@@ -214,7 +213,7 @@ public class MainParentPage extends AbstractPage {
 	
 	public void addParentEmail() {
 		inputEmail.clear();
-		inputEmail.sendKeys(parentEmail1);
+		inputEmail.sendKeys(email);
 	}
 	
 	public void clickUpdateMyDataButton() {

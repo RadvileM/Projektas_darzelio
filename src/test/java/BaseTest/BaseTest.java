@@ -30,6 +30,6 @@ public abstract class BaseTest {
 	@AfterMethod (alwaysRun = true)
 	public static void tearDown() {
 		driver.manage().deleteAllCookies();
-		//driver.close();
+		driver.close();
 	}
 }

@@ -111,7 +111,7 @@ public class SpecialistPasswordChange extends AbstractPage{
 	
 	public void clickMyDataButton() {
 		myDataButton.click();
-		// wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='Dabartinis slaptažodis']")));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > div > div > div:nth-child(1) > div > h2")));
 	}
 	
 	public void addOldPassword() {
