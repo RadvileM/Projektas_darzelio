@@ -12,7 +12,7 @@ public class SpecialistAddPersonalDataTest extends BaseTest {
 	
 	
   @Test(groups = "regression")
-  public void specialistAddPersonalDataTest() throws InterruptedException {
+  public void specialistAddPersonalDataTest(){
 	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
 	  SpecialistPasswordChange passwordChange = new SpecialistPasswordChange(driver);
 	  

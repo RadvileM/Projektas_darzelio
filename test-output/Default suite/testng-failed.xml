@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tests.KindergartenAddToList">
+      <class name="Tests.AdminLockUnlockSpecialistFunctionsTest">
         <methods>
-          <include name="uploadKindergarenToList"/>
+          <include name="adminLockUnlockSpecialistFunctions"/>
           <include name="tearDown"/>
           <include name="openHomePage"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- Tests.KindergartenAddToList -->
+      </class> <!-- Tests.AdminLockUnlockSpecialistFunctionsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
