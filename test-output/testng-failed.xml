@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [SmokeTests]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="smoke(failed)">
-    <groups>
-      <run>
-        <include name="smoke"/>
-      </run>
-    </groups>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tests.AdminPageTest">
+      <class name="Tests.KindergartenAddToList">
         <methods>
-          <include name="mainPageTest"/>
+          <include name="uploadKindergarenToList"/>
           <include name="tearDown"/>
           <include name="openHomePage"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- Tests.AdminPageTest -->
+      </class> <!-- Tests.KindergartenAddToList -->
     </classes>
-  </test> <!-- smoke(failed) -->
-</suite> <!-- Failed suite [SmokeTests] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -19,7 +19,7 @@ public class SpecialistPasswordChange extends AbstractPage{
 	
 	
 	private String newSpecialistUsername = "Specialist" + rand.nextInt(1000);
-	private String specialistPassword = "Test" + rand.nextInt(100000);
+	private String specialistPassword = "Test" + rand.nextInt(1000000);
 	
 	//inputs
 	@FindBy(name = "name")

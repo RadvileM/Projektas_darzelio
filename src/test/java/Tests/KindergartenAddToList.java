@@ -11,7 +11,7 @@ import page.MainSpecialistPage;
 public class KindergartenAddToList extends BaseTest {
 	
   @Test(groups = "regression")
-  public void uploadKindergarenToList() {
+  public void uploadKindergarenToList() throws InterruptedException{
 	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
 	  KindergartensPage kindergartensPage = new KindergartensPage(driver);
 	  
@@ -20,7 +20,7 @@ public class KindergartenAddToList extends BaseTest {
 	  kindergartensPage.addKindergartenName();
 	  kindergartensPage.addKindergartenAddress();
 	  kindergartensPage.clickAddNewKindergartenButton();
-	  
+	  Thread.sleep(1000);
 	  String actualAddedKindergartenText = kindergartensPage.textKindergartenAdded();
 	  String expectedKindergartenText = "Darželis įvestas sėkmingai!";
 	  assertEquals(actualAddedKindergartenText, expectedKindergartenText);

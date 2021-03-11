@@ -28,13 +28,10 @@ public class MainParentPage extends AbstractPage {
 	private String parentID = "12345678" + (rand.nextInt(900) + 100);
 	private String parentAddress = "Ukmerges g. 19";
 	private String parentCity = "Vilnius";
-<<<<<<< HEAD
-	private String parentEmail = "test@test.lt";
-	private String childID = "3234567" + (rand.nextInt(9000) + 1000);
-=======
+	private String parentEmail1 = "test@test.lt";
+	private String childID1 = "3234567" + (rand.nextInt(9000) + 1000);
 	private String parentEmail = "marius@adomaitis" + rand.nextInt(1000) + ".lt";
 	private String childID = "3234567" + rand.nextInt(10000);
->>>>>>> 4ff613108bd70c3bd8851f8888d4ac4551144a0a
 	private String birthdate = "09122016";
 	
 	
@@ -218,7 +215,7 @@ public class MainParentPage extends AbstractPage {
 	
 	public void addParentEmail() {
 		inputEmail.clear();
-		inputEmail.sendKeys(parentEmail);
+		inputEmail.sendKeys(parentEmail1);
 	}
 	
 	public void clickUpdateMyDataButton() {
