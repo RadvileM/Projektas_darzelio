@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainParentPage extends AbstractPage {	
-	 WebDriverWait wait = new WebDriverWait(driver, 3);
+	 WebDriverWait wait = new WebDriverWait(driver, 5);
 		
 	Random rand = new Random();
 	
@@ -146,7 +146,7 @@ public class MainParentPage extends AbstractPage {
 	@FindBy(css = "#root > div > div > form > button.btn.btn-success.my-5")
 	private WebElement submitButton;
 	
-	@FindBy(xpath= "//*[text()='Failas įkeltas sėkmingai!']")
+	@FindBy(xpath= "//div[text()='Failas įkeltas sėkmingai!']")
 	private WebElement textSuccessfulPdfUpload;
 	
 	
@@ -196,6 +196,8 @@ public class MainParentPage extends AbstractPage {
 	public void addParentName() {
 		inputPersonalName.clear();
 		inputPersonalName.sendKeys(name);
+		 wait.until(
+				 ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='Pavardė']")));
 	}
 	
 	public void addParentLastName() {

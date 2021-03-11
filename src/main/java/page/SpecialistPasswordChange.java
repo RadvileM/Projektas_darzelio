@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SpecialistPasswordChange extends AbstractPage{
-	WebDriverWait wait = new WebDriverWait(driver, 3);
+	WebDriverWait wait = new WebDriverWait(driver, 5);
 	
 	Random rand = new Random();
 	
@@ -103,15 +103,14 @@ public class SpecialistPasswordChange extends AbstractPage{
 
 	public void clickLoginButton() {
 		loginButton.click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > nav > div:nth-child(3) > li > a")));
+		//wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > nav > div:nth-child(3) > li > a")));
 	}
 	
 	//Specialist changes the password
 	
 	public void clickMyDataButton() {
 		myDataButton.click();
-		 wait.until(
-				 ExpectedConditions.presenceOfElementLocated(By.id("Vardas")));
+		// wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='Dabartinis slaptažodis']")));
 	}
 	
 	public void addOldPassword() {
@@ -125,7 +124,7 @@ public class SpecialistPasswordChange extends AbstractPage{
 
 	public void clickChangeButton() {
 		changePassword.click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > div > div > div:nth-child(2) > div > form > div.form-group.m-3 > div")));
+		//wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > div > div > div:nth-child(2) > div > form > div.form-group.m-3 > div")));
 	}
 	
 	

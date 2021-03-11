@@ -36,17 +36,17 @@ public class SpecialistPasswordChangeTest extends BaseTest{
 	passwordChange.addSpecialistUsername();
 	passwordChange.addSpecialistPassword();
 	passwordChange.clickLoginButton();
-	//Thread.sleep(1000);
+	Thread.sleep(1000);
 	
 	//Clicking on "Mano duomenys" button, add old and new passwords
 	
 	passwordChange.clickMyDataButton();
-	//Thread.sleep(1000);
+	Thread.sleep(3000);
 	
 	passwordChange.addOldPassword();
 	passwordChange.addNewPassword();
 	passwordChange.clickChangeButton();
-	//Thread.sleep(3000);
+	Thread.sleep(3000);
 
 	//assert to check if the password has been changed
 	String actualLoginText = passwordChange.textSuccessfulSpecialistLogin();

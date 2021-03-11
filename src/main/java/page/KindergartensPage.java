@@ -2,16 +2,20 @@ package page;
 
 import java.util.Random;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class KindergartensPage extends AbstractPage {
+	WebDriverWait wait = new WebDriverWait(driver, 5);
 	
 	Random rand = new Random();
 	
-	private String name = "Vilniaus Saulute " + rand.nextInt(100);
-	private String adrress = "Gedimino pr. " + rand.nextInt(100);
+	private String name = "Vilniaus Saulute " + rand.nextInt(1000);
+	private String adrress = "Gedimino pr. " + rand.nextInt(1000);
 	
 	
 	//buttons
@@ -34,6 +38,7 @@ public class KindergartensPage extends AbstractPage {
 	@FindBy(xpath = "//div[@class='alert alert-success']")
 	public WebElement textKindergartenAddedsuccessful;
 	
+	
 	//methods
 	public void clickNewKindergartenButton() {
 		newKindergatenButton.click();
@@ -48,10 +53,12 @@ public class KindergartensPage extends AbstractPage {
 	}
 	
 	public void clickAddNewKindergartenButton() {
-		confirmKindergartenButton.click();
+		confirmKindergartenButton.click();	
+
 	}
 	
 	public String textKindergartenAdded() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 		return textKindergartenAddedsuccessful.getText();
 		
 	}

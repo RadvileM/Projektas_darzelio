@@ -28,6 +28,14 @@ public class MainAdminPage extends AbstractPage{
 	@FindBy(css = "#root > div > nav > div:nth-child(3) > li > a")
 	private WebElement logoutButton;
 	
+	
+	//lock/unlock user Specialist
+	@FindBy(xpath = "//button[@class='btn btn-sm btn-secondary col-12']")
+	private WebElement lockButton;
+	
+	@FindBy(xpath = "//button[@class='btn btn-sm btn-info col-12']")
+	private WebElement unlockButton;
+	
 	//text
 	@FindBy(linkText = "Administratorius")
 	private WebElement successfulAdminLogin;
@@ -35,7 +43,10 @@ public class MainAdminPage extends AbstractPage{
 	@FindBy(css = "#root > div > div > div > div > form > div.form-group.mx-auto.mt-3 > label")
 	public WebElement successfulAdminLogout;
 	
-
+	//lock/unlock user Specialist
+	@FindBy(xpath = "//div[@class='alert alert-success']")
+	public WebElement successfulLockedUnlockedSpecialist;
+	
 	
 	public MainAdminPage(WebDriver driver) {
 		super(driver);
@@ -74,6 +85,20 @@ public class MainAdminPage extends AbstractPage{
 	
 	public String textSuccessfulAdminLogout() {
 		return successfulAdminLogout.getText();
+	}
+	
+	//lock/unlock specialist
+	
+	public void clickLockButton() {
+		lockButton.click();
+	}
+	
+	public void clickUnlockButton() {
+		unlockButton.click();
+	}
+	
+	public String textSuccessfulLockedUnlockedSpecialist() {
+		return successfulLockedUnlockedSpecialist.getText();
 	}
 
 }
