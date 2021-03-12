@@ -19,13 +19,14 @@ public class KindergartensPage extends AbstractPage {
 	
 	
 	//buttons
-	@FindBy(xpath = "//*[@id=\"root\"]/div/div/div/div[1]/div/div/table/tfoot/tr/td[1]/button")
+	@FindBy(xpath = "//button[@class='btn btn-md btn-success']")
 	public WebElement newKindergatenButton;
 	
 	@FindBy(css = "#root > div > div > div > div.col-7 > div > div > table > tfoot > tr > td:nth-child(3) > button")
 	public WebElement confirmKindergartenButton;
 	
-	
+
+
 	//inputs
 	@FindBy(id = "name")
 	public WebElement inputKindergartenName;
@@ -37,6 +38,9 @@ public class KindergartensPage extends AbstractPage {
 	//text
 	@FindBy(xpath = "//div[@class='alert alert-success']")
 	public WebElement textKindergartenAddedsuccessful;
+	
+	@FindBy(css = "#root > div > div > div > div.col-7 > div.row > div > table > tfoot > tr > td:nth-child(1) > button > p")
+	public WebElement textOnAddKindergartenButton;
 	
 	
 	//methods
@@ -63,6 +67,12 @@ public class KindergartensPage extends AbstractPage {
 		
 	}
 	
+	//tikrina ar yra mygtukas prideti darzeli
+	
+	public String textOnButtonAddKindergarten() {
+		return textOnAddKindergartenButton.getText();
+				
+	}
 	
 	
 	

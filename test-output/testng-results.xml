@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-11T21:46:30 EET" name="Default suite" finished-at="2021-03-11T21:46:38 EET" duration-ms="8434">
+  <suite started-at="2021-03-12T09:21:43 EET" name="Default suite" finished-at="2021-03-12T09:21:53 EET" duration-ms="10014">
     <groups>
     </groups>
-    <test started-at="2021-03-11T21:46:30 EET" name="Default test" finished-at="2021-03-11T21:46:38 EET" duration-ms="8434">
+    <test started-at="2021-03-12T09:21:43 EET" name="Default test" finished-at="2021-03-12T09:21:53 EET" duration-ms="10014">
       <class name="Tests.AdminLockUnlockSpecialistFunctionsTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@2525ff7e]" started-at="2021-03-11T21:46:30 EET" name="setUp" finished-at="2021-03-11T21:46:30 EET" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@37858383]" started-at="2021-03-12T09:21:43 EET" name="setUp" finished-at="2021-03-12T09:21:43 EET" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@2525ff7e]" started-at="2021-03-11T21:46:30 EET" name="openHomePage" finished-at="2021-03-11T21:46:34 EET" duration-ms="3620" status="PASS">
+        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@37858383]" started-at="2021-03-12T09:21:43 EET" name="openHomePage" finished-at="2021-03-12T09:21:46 EET" duration-ms="3115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openHomePage -->
-        <test-method signature="adminLockUnlockSpecialistFunctions()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@2525ff7e]" started-at="2021-03-11T21:46:34 EET" name="adminLockUnlockSpecialistFunctions" finished-at="2021-03-11T21:46:38 EET" duration-ms="4737" status="PASS">
+        <test-method signature="adminLockUnlockSpecialistFunctions()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@37858383]" started-at="2021-03-12T09:21:46 EET" name="adminLockUnlockSpecialistFunctions" finished-at="2021-03-12T09:21:52 EET" duration-ms="6518" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- adminLockUnlockSpecialistFunctions -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@2525ff7e]" started-at="2021-03-11T21:46:38 EET" name="tearDown" finished-at="2021-03-11T21:46:38 EET" duration-ms="29" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@37858383]" started-at="2021-03-12T09:21:52 EET" name="tearDown" finished-at="2021-03-12T09:21:53 EET" duration-ms="332" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
