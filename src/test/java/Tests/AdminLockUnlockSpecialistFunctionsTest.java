@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import BaseTest.BaseTest;
+import page.KindergartenQueuePage;
+import page.KindergartensPage;
 import page.MainAdminPage;
 import page.MainSpecialistPage;
 
@@ -16,6 +18,8 @@ public class AdminLockUnlockSpecialistFunctionsTest extends BaseTest {
   public void adminLockUnlockSpecialistFunctions() throws InterruptedException {
 	  MainAdminPage mainPage = new MainAdminPage(driver);
 	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
+	  KindergartensPage kindergartensPage = new KindergartensPage(driver);
+	  KindergartenQueuePage kindergartenQueue = new KindergartenQueuePage(driver);
 	  
 	  //admin prisijungia prie sistemos
 	  mainPage.doAdminLogin();
@@ -65,6 +69,25 @@ public class AdminLockUnlockSpecialistFunctionsTest extends BaseTest {
 		 String expectedUnlockedText = "Švietimo specialistų funkcionalumas atstatytas";
 		 assertEquals(actualUnlockedSpecialistText, expectedUnlockedText);
 	  
-	  
+		 mainPage.doAdminLogout();
+		  
+		  //specialistas prisijungia prie sistemos
+		  specialistPage.doSpecialistLogin();
+		  
+		  wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='btn btn-md btn-success']")));
+		 
+		  //patikrina ar yra mygtukas "Prideti darzeli"
+		  String actualButtoAddKindergartenText = kindergartensPage.textOnButtonAddKindergarten();
+		  String expectedButtonText = "Pridėti darželį";
+		  assertEquals(actualButtoAddKindergartenText, expectedButtonText);
+		  
+		  
+		  kindergartenQueue.clickKindergartenQueuePage();
+		  wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='col-12 btn btn-lg btn-success m-1']")));
+		  
+		  String actualKindergartenQueueButtonText = kindergartenQueue.textOnKindergartenQueueButton();
+		  String expectedKindergartenQueueButtonText = "Sudaryti eiles";
+		  assertEquals(actualKindergartenQueueButtonText, expectedKindergartenQueueButtonText);
+		  
   }
 }

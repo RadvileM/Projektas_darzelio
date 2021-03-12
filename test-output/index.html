@@ -50,8 +50,8 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-RegressionTests" class="navigator-link ">
-                    <span>C:\Users\Gintare\Desktop\GIT\Projektas_darzelio\src\test\java\testsuites\regression.xml</span>
+                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
+                    <span>C:\Users\Gintare\AppData\Local\Temp\testng-eclipse--762957741\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -217,7 +217,7 @@
         </div> <!-- panel RegressionTests -->
         <div panel-name="test-xml-RegressionTests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Gintare\Desktop\GIT\Projektas_darzelio\src\test\java\testsuites\regression.xml</span>
+            <span class="header-content">C:\Users\Gintare\AppData\Local\Temp\testng-eclipse--762957741\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -234,15 +234,11 @@
       &lt;package name=&quot;Tests&quot;/&gt;
     &lt;/packages&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Tests.AdminLockUnlockSpecialistFunctionsTest&quot;/&gt;
-      &lt;class name=&quot;Tests.AdminPageTest&quot;/&gt;
-      &lt;class name=&quot;Tests.ChildRegistrationTest&quot;/&gt;
-      &lt;class name=&quot;Tests.KindergartenAddToList&quot;/&gt;
-      &lt;class name=&quot;Tests.ParentAddPersonalDataTest&quot;/&gt;
-      &lt;class name=&quot;Tests.ParentPageTest&quot;/&gt;
-      &lt;class name=&quot;Tests.SpecialistAddPersonalDataTest&quot;/&gt;
-      &lt;class name=&quot;Tests.SpecialistPageTest&quot;/&gt;
-      &lt;class name=&quot;Tests.SpecialistPasswordChangeTest&quot;/&gt;
+      &lt;class name=&quot;Tests.AdminLockUnlockSpecialistFunctionsTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;adminLockUnlockSpecialistFunctions&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- Tests.AdminLockUnlockSpecialistFunctionsTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- regression --&gt;
 &lt;/suite&gt; &lt;!-- RegressionTests --&gt;
@@ -308,32 +304,16 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'pdfUploadTest')
-data.setCell(0, 2, 'Tests.ChildRegistrationTest')
-data.setCell(0, 3, 18742);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'specialistPasswordChangeTest')
-data.setCell(1, 2, 'Tests.SpecialistPasswordChangeTest')
-data.setCell(1, 3, 10151);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'specialistAddPersonalDataTest')
-data.setCell(2, 2, 'Tests.SpecialistAddPersonalDataTest')
-data.setCell(2, 3, 2704);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'uploadKindergarenToList')
-data.setCell(3, 2, 'Tests.KindergartenAddToList')
-data.setCell(3, 3, 2683);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'parentAddPersonalDataTest')
-data.setCell(4, 2, 'Tests.ParentAddPersonalDataTest')
-data.setCell(4, 3, 2486);
-window.suiteTableData['RegressionTests']= { tableData: data, tableDiv: 'times-div-RegressionTests'}
+data.setCell(0, 1, 'adminLockUnlockSpecialistFunctions')
+data.setCell(0, 2, 'Tests.AdminLockUnlockSpecialistFunctionsTest')
+data.setCell(0, 3, 6518);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 36 seconds</span>
-              <div id="times-div-RegressionTests">
-              </div> <!-- times-div-RegressionTests -->
+              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -443,12 +423,12 @@ return data;
                 <span class="method-start">38 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">pdfUploadTest</span>
-                <span class="method-start">3552 ms</span>
+                <span class="method-name">adminLockUnlockSpecialistFunctions</span>
+                <span class="method-start">3150 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">22297 ms</span>
+                <span class="method-start">9670 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
