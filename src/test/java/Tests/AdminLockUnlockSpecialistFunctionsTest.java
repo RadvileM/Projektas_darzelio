@@ -88,6 +88,7 @@ public class AdminLockUnlockSpecialistFunctionsTest extends BaseTest {
 		  String actualKindergartenQueueButtonText = kindergartenQueue.textOnKindergartenQueueButton();
 		  String expectedKindergartenQueueButtonText = "Sudaryti eiles";
 		  assertEquals(actualKindergartenQueueButtonText, expectedKindergartenQueueButtonText);
-		  
+		
+		  specialistPage.doSpecialistLogout();
   }
 }

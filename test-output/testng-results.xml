@@ -1,64 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="14" total="19" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-12T09:21:43 EET" name="Default suite" finished-at="2021-03-12T09:21:53 EET" duration-ms="10014">
+  <suite started-at="2021-03-12T09:28:18 EET" name="Default suite" finished-at="2021-03-12T09:28:28 EET" duration-ms="10493">
     <groups>
-      <group name="regression">
-        <method signature="ChildRegistrationTest.pdfUploadTest()[pri:0, instance:Tests.ChildRegistrationTest@59af0466]" name="pdfUploadTest" class="Tests.ChildRegistrationTest"/>
-        <method signature="KindergartenAddToList.uploadKindergarenToList()[pri:0, instance:Tests.KindergartenAddToList@3e6ef8ad]" name="uploadKindergarenToList" class="Tests.KindergartenAddToList"/>
-        <method signature="ParentAddPersonalDataTest.parentAddPersonalDataTest()[pri:0, instance:Tests.ParentAddPersonalDataTest@346d61be]" name="parentAddPersonalDataTest" class="Tests.ParentAddPersonalDataTest"/>
-        <method signature="SpecialistAddPersonalDataTest.specialistAddPersonalDataTest()[pri:0, instance:Tests.SpecialistAddPersonalDataTest@55536d9e]" name="specialistAddPersonalDataTest" class="Tests.SpecialistAddPersonalDataTest"/>
-        <method signature="SpecialistPasswordChangeTest.specialistPasswordChangeTest()[pri:0, instance:Tests.SpecialistPasswordChangeTest@747edf66]" name="specialistPasswordChangeTest" class="Tests.SpecialistPasswordChangeTest"/>
-      </group> <!-- regression -->
     </groups>
-    <test started-at="2021-03-12T09:21:43 EET" name="Default test" finished-at="2021-03-12T09:21:53 EET" duration-ms="10014">
+    <test started-at="2021-03-12T09:28:18 EET" name="Default test" finished-at="2021-03-12T09:28:28 EET" duration-ms="10493">
       <class name="Tests.AdminLockUnlockSpecialistFunctionsTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@37858383]" started-at="2021-03-12T09:21:43 EET" name="setUp" finished-at="2021-03-12T09:21:43 EET" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@2525ff7e]" started-at="2021-03-12T09:28:18 EET" name="setUp" finished-at="2021-03-12T09:28:18 EET" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@37858383]" started-at="2021-03-12T09:21:43 EET" name="openHomePage" finished-at="2021-03-12T09:21:46 EET" duration-ms="3115" status="PASS">
+        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@2525ff7e]" started-at="2021-03-12T09:28:18 EET" name="openHomePage" finished-at="2021-03-12T09:28:21 EET" duration-ms="3598" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openHomePage -->
-        <test-method signature="adminLockUnlockSpecialistFunctions()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@37858383]" started-at="2021-03-12T09:21:46 EET" name="adminLockUnlockSpecialistFunctions" finished-at="2021-03-12T09:21:52 EET" duration-ms="6518" status="PASS">
+        <test-method signature="adminLockUnlockSpecialistFunctions()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@2525ff7e]" started-at="2021-03-12T09:28:21 EET" name="adminLockUnlockSpecialistFunctions" finished-at="2021-03-12T09:28:28 EET" duration-ms="6441" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- adminLockUnlockSpecialistFunctions -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@37858383]" started-at="2021-03-12T09:21:52 EET" name="tearDown" finished-at="2021-03-12T09:21:53 EET" duration-ms="332" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.AdminLockUnlockSpecialistFunctionsTest@2525ff7e]" started-at="2021-03-12T09:28:28 EET" name="tearDown" finished-at="2021-03-12T09:28:28 EET" duration-ms="398" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Tests.SpecialistAddPersonalDataTest -->
-      <class name="Tests.SpecialistPasswordChangeTest">
-        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.SpecialistPasswordChangeTest@747edf66]" started-at="2021-03-11T22:25:26 EET" name="openHomePage" finished-at="2021-03-11T22:25:29 EET" duration-ms="2938" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openHomePage -->
-        <test-method signature="specialistPasswordChangeTest()[pri:0, instance:Tests.SpecialistPasswordChangeTest@747edf66]" started-at="2021-03-11T22:25:29 EET" name="specialistPasswordChangeTest" finished-at="2021-03-11T22:25:39 EET" duration-ms="10151" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- specialistPasswordChangeTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.SpecialistPasswordChangeTest@747edf66]" started-at="2021-03-11T22:25:40 EET" name="tearDown" finished-at="2021-03-11T22:25:40 EET" duration-ms="328" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Tests.SpecialistPasswordChangeTest -->
-      <class name="Tests.KindergartenAddToList">
-        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.KindergartenAddToList@3e6ef8ad]" started-at="2021-03-11T22:25:09 EET" name="openHomePage" finished-at="2021-03-11T22:25:12 EET" duration-ms="2820" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openHomePage -->
-        <test-method signature="uploadKindergarenToList()[pri:0, instance:Tests.KindergartenAddToList@3e6ef8ad]" started-at="2021-03-11T22:25:12 EET" name="uploadKindergarenToList" finished-at="2021-03-11T22:25:15 EET" duration-ms="2683" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- uploadKindergarenToList -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.KindergartenAddToList@3e6ef8ad]" started-at="2021-03-11T22:25:15 EET" name="tearDown" finished-at="2021-03-11T22:25:15 EET" duration-ms="331" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Tests.KindergartenAddToList -->
-    </test> <!-- regression -->
-  </suite> <!-- RegressionTests -->
+      </class> <!-- Tests.AdminLockUnlockSpecialistFunctionsTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
