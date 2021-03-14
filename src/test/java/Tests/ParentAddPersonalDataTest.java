@@ -13,7 +13,7 @@ public class ParentAddPersonalDataTest extends BaseTest {
   public void parentAddPersonalDataTest() throws InterruptedException {
 	  MainParentPage parentPage = new MainParentPage(driver);
 	  
-	  //parent login
+	  //Parent prisijungia prie sistemos
 	  parentPage.doParentLogin();
 	  //laukia elemento	  
 	  //Specialist click "Mano duomenys" adding new data

@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainSpecialistPage extends AbstractPage {
-	 WebDriverWait wait = new WebDriverWait(driver, 3);
+	 WebDriverWait wait = new WebDriverWait(driver, 5);
 		
 	Random rand = new Random();
 	
@@ -46,13 +46,14 @@ public class MainSpecialistPage extends AbstractPage {
 	@FindBy (id = "El.paštas")
 	private WebElement inputEmail;
 	
-	
+	//links navbar
+	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(1) > a")
+	private WebElement kindergartenQueueButton;
 	
 	
 	//buttons
 	@FindBy(css = "#root > div > div > div > div > form > div.form-group.text-center.mt-5 > button")
 	private WebElement loginButton;
-	
 	
 	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(7) > a")
 	private WebElement logoutButton;
@@ -74,6 +75,13 @@ public class MainSpecialistPage extends AbstractPage {
 	@FindBy(css = "#root > div > div > div > div:nth-child(1) > div > form > div.form-group.m-3 > div")
 	private WebElement updatePersonalData;
 	
+	//"Specialisto lock/unlock funkcijos"
+	
+	@FindBy(xpath = "//div[@class='alert alert-secondary mb-2']")
+	private WebElement lockedKindergartenAddList;
+	
+	@FindBy(xpath = "//div[@class='alert alert-secondary col']")
+	private WebElement creatQueueLocked;
 	
 	public MainSpecialistPage(WebDriver driver) {
 		super(driver);
@@ -91,14 +99,6 @@ public class MainSpecialistPage extends AbstractPage {
 		   
 	}
 	
-
-	//public void addInputSpecialistPassword() {
-	//	inputPassword.sendKeys(password);
-	//}
-
-	//public void clickLoginButton() {
-	//	loginButton.click();
-	//}
 	
 	public void doSpecialistLogout() {
 		logoutButton.click();
@@ -117,6 +117,8 @@ public class MainSpecialistPage extends AbstractPage {
 	public void addSpecialistName() {
 		inputPersonalName.clear();
 		inputPersonalName.sendKeys(name);
+		wait.until(
+		          ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='Pavardė']")));
 	}
 	
 	public void addSpecialistLastName() {
@@ -144,7 +146,20 @@ public class MainSpecialistPage extends AbstractPage {
 	}
 	
 	
+	//lock/unlock specialisto funkcijos
+	public String addKindergartenNotPossibleText() {
+		return lockedKindergartenAddList.getText();
 	}
+	
+	public void clickKindergartenQueueLink() {
+		kindergartenQueueButton.click();
+	}
+	
+	public String createQueueLockedText() {
+		return creatQueueLocked.getText();
+	}
+	
+}
 	
 
 	

@@ -12,16 +12,15 @@ public class SpecialistAddPersonalDataTest extends BaseTest {
 	
 	
   @Test(groups = "regression")
-  public void specialistAddPersonalDataTest() throws InterruptedException {
+  public void specialistAddPersonalDataTest(){
 	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
 	  SpecialistPasswordChange passwordChange = new SpecialistPasswordChange(driver);
 	  
-	  //Specialist Login
+	  //Specialistas prisijungia prie sistemos
 	 specialistPage.doSpecialistLogin();
 	 //laukia elemento
 	 
-	 //Specialist click "Mano duomenys" adding new data
-	 
+	 //Specialistas nueine i puslapi "Mano duomenys" 
 	passwordChange.clickMyDataButton();
 	//laukia elemento
 	

@@ -68,10 +68,10 @@ public class ChildRegistrationTest extends BaseTest{
 		 
 		  
 
-		driver.findElement(By.id("files")).sendKeys("C:\\Users\\Radvile\\Desktop\\Test_PDF.pdf");
+		//driver.findElement(By.id("files")).sendKeys("C:\\Users\\Radvile\\Desktop\\Test_PDF.pdf");
 //FIX THIS!!!	//	driver.findElement(By.id("files")).sendKeys("..\\src\\test\\resources\\Test_PDF.pdf");
 
-	//	driver.findElement(By.id("files")).sendKeys("C:\\Users\\Gintare\\Desktop\\Medicinine_pazyma.pdf");
+		driver.findElement(By.id("files")).sendKeys("C:\\Users\\Gintare\\Desktop\\Medicinine_pazyma.pdf");
 
 	
 

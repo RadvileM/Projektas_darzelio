@@ -3,14 +3,23 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="Tests.ChildRegistrationTest">
+=======
+      <class name="Tests.ParentAddPersonalDataTest">
+>>>>>>> 933470f2763b081974f84a898afadf9d07612f21
         <methods>
           <include name="tearDown"/>
           <include name="pdfUploadTest"/>
           <include name="openHomePage"/>
+          <include name="parentAddPersonalDataTest"/>
           <include name="setUp"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- Tests.ChildRegistrationTest -->
+=======
+      </class> <!-- Tests.ParentAddPersonalDataTest -->
+>>>>>>> 933470f2763b081974f84a898afadf9d07612f21
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
