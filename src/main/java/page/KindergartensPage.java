@@ -22,7 +22,7 @@ public class KindergartensPage extends AbstractPage {
 	@FindBy(xpath = "//button[@class='btn btn-md btn-success']")
 	public WebElement newKindergatenButton;
 	
-	@FindBy(css = "#root > div > div > div > div.col-7 > div > div > table > tfoot > tr > td:nth-child(3) > button")
+	@FindBy(xpath = "//button[@class='btn btn-md btn-success']")
 	public WebElement confirmKindergartenButton;
 	
 
@@ -36,12 +36,13 @@ public class KindergartensPage extends AbstractPage {
 	
 	
 	//text
-	//@FindBy(xpath = "//*[@id=\"root\"]/div/div/div/div[1]/div[2]/div/table/tfoot/tr/td[2]/div/div")
-	//(xpath = "//div[@class='alert alert-success']")
-	@FindBy(css = "#root > div > div > div > div.col-7 > div.row > div > table > tfoot > tr > td:nth-child(2) > div > div")
+
+	@FindBy(xpath = "//div[@class='alert alert-success']")
+	//(css = "#root > div > div > div > div.col-7 > div.row > div > table > tfoot > tr > td:nth-child(2) > div > div")
 	public WebElement textKindergartenAddedsuccessful;
 	
-	@FindBy(css = "#root > div > div > div > div.col-7 > div.row > div > table > tfoot > tr > td:nth-child(1) > button > p")
+	@FindBy(xpath = "//button[@class='btn btn-md btn-success']")
+	//(css = "#root > div > div > div > div.col-7 > div.row > div > table > tfoot > tr > td:nth-child(1) > button > p")
 	public WebElement textOnAddKindergartenButton;
 	
 	
@@ -60,11 +61,11 @@ public class KindergartensPage extends AbstractPage {
 	
 	public void clickAddNewKindergartenButton() {
 		confirmKindergartenButton.click();	
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 
 	}
 	
 	public String textKindergartenAdded() {
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 		return textKindergartenAddedsuccessful.getText();
 		
 	}

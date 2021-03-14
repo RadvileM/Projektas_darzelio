@@ -3,6 +3,8 @@ package page;
 import java.util.List;
 import java.util.Random;
 
+import javax.xml.xpath.XPath;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.By.ByTagName;
 import org.openqa.selenium.WebDriver;
@@ -65,7 +67,7 @@ public class MainParentPage extends AbstractPage {
 	@FindBy(css = "#root > div > div > div > form > div.form-group.text-center.mt-5 > button")
 	private WebElement loginButton;
 		
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(6) > a")
+	@FindBy(css = "#root > nav > ul > li:nth-child(6) > a")
 	private WebElement logoutButton;
 	
 	//upload PDF button
@@ -82,28 +84,33 @@ public class MainParentPage extends AbstractPage {
 	private WebElement clickCreate;
 		
 	//"Mano duomenys"
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(4) > a")
+	@FindBy(css = "#root > nav > ul > li:nth-child(4) > a")
 	private WebElement myDataButton;
 
-	@FindBy(css = "#root > div > div > div > div:nth-child(1) > div > form > div:nth-child(2) > div > button")
+	@FindBy(css = "#root > div > div > div:nth-child(1) > div > form > div:nth-child(2) > div > button.btn.btn-success.mx-auto")
 	private WebElement updateMyDataButton;
 	
 	//text
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(5) > a > span")
+	@FindBy(css = "#root > nav > ul > li:nth-child(5) > a > span")
 	private WebElement successfulParentLogin;
 	
-	@FindBy(css = "#root > div > div > div > div > form > div.form-group.mx-auto.mt-3 > label")
+	
+	@FindBy(css = "#root > div > div > div > form > div.form-group.mx-auto.mt-3 > label")
+	//(css = "#root > div > div > div > div > form > div.form-group.mx-auto.mt-3 > label")
 	private WebElement successfulParentLogout;
 	
 	//"mano duomenys"
-	@FindBy(css = "#root > div > div > div > div:nth-child(1) > div > form > div.form-group.m-3 > div")
+	@FindBy(xpath = "//div[@class='alert alert-success']")
+	//(css = "#root > div > div > div > div:nth-child(1) > div > form > div.form-group.m-3 > div")
 	private WebElement updatePersonalData;
 	
 	//parent creates child's registration form
 	@FindBy(css = "#root > div > div:nth-child(1) > div > a")
 	private WebElement clickFormUpload;
 	
-	@FindBy(css = "#root > div > div > div:nth-child(3) > div > table > tbody > tr > td:nth-child(7) > div.btn-group > button.btn.btn-success")
+	@FindBy(xpath = "//button[@class='btn btn-success']")
+	//(css = "#root > div > div:nth-child(3) > div > table > tbody > tr > td:nth-child(7) > div.btn-group > button.btn.btn-secondary")
+	//(css = "#root > div > div > div:nth-child(3) > div > table > tbody > tr > td:nth-child(7) > div.btn-group > button.btn.btn-success")
 	private WebElement uploadFile;
 	
 	@FindBy(id = "vardasAtstovas1")
@@ -145,7 +152,7 @@ public class MainParentPage extends AbstractPage {
 	@FindBy(id = "vaikoMiestas")
 	private WebElement inputChildCity;
 	
-	@FindBy(css = "#root > form > button.btn.btn-success.my-5")
+	@FindBy(xpath = "//button[@class='btn btn-success my-5']")
 	private WebElement submitButton;
 	
 	@FindBy(xpath= "//div[text()='Failas įkeltas sėkmingai!']")
@@ -164,7 +171,7 @@ public class MainParentPage extends AbstractPage {
 		inputPassword.sendKeys(password);
 		loginButton.click();
 		  wait.until(
-		          ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > nav > div:nth-child(3) > li:nth-child(4) > a")));
+		          ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > nav > ul > li:nth-child(5) > a > span")));
 	}
 	
 	public void doParentLoginUploadTest() {
@@ -218,7 +225,7 @@ public class MainParentPage extends AbstractPage {
 	
 	public void clickUpdateMyDataButton() {
 		updateMyDataButton.click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > div > div > div:nth-child(1) > div > form > div.form-group.m-3 > div")));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 	}
 	
 	public String textUpdateData() {

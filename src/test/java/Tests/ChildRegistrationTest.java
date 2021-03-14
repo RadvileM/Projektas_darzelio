@@ -40,6 +40,7 @@ public class ChildRegistrationTest extends BaseTest{
 		
 		//parent creates child's registration form
 		parentPage.clickFormUploadButton();
+		Thread.sleep(3000);
 		parentPage.addParentNameInput();
 		parentPage.addParentLastnameInput();
 		parentPage.addParentID();
@@ -55,24 +56,23 @@ public class ChildRegistrationTest extends BaseTest{
 		parentPage.addChildCity();
 		Thread.sleep(2000);
 		parentPage.selectKindergarten();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		parentPage.selectPriorities();
 		Thread.sleep(2000);
 		parentPage.clickSubmitButton();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		
 		//pdf upload
 		
 		  JavascriptExecutor js = (JavascriptExecutor) driver;
 		  js.executeScript("document.querySelector('#files').style ='';");
 		 
-		  
 
 		//driver.findElement(By.id("files")).sendKeys("C:\\Users\\Radvile\\Desktop\\Test_PDF.pdf");
 //FIX THIS!!!	//	driver.findElement(By.id("files")).sendKeys("..\\src\\test\\resources\\Test_PDF.pdf");
 
 		driver.findElement(By.id("files")).sendKeys("C:\\Users\\Gintare\\Desktop\\Medicinine_pazyma.pdf");
-
+		
 	
 
 	parentPage.clickPdfUploadButton();

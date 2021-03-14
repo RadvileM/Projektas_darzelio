@@ -7,11 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-
-
-
-
-
 public class MainAdminPage extends AbstractPage{
 	
 	private String username1 = "admin";
@@ -37,7 +32,7 @@ public class MainAdminPage extends AbstractPage{
 	
 	
 	//lock/unlock user Specialist
-	@FindBy(xpath = "//button[@class='btn btn-sm btn-secondary col-12']")
+	@FindBy(xpath = "//button[@class='btn btn-sm btn-secondary']")
 	private WebElement lockButton;
 	
 	@FindBy(xpath = "//button[@class='btn btn-sm btn-info col-12']")

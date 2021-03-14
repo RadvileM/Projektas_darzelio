@@ -7,11 +7,11 @@ import org.openqa.selenium.support.FindBy;
 public class KindergartenQueuePage extends AbstractPage {
 
 	//Nav bar link
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(1) > a")
+	@FindBy(css = "#root > nav > ul > li:nth-child(1) > a")
 	public WebElement kinderGartenQueueButton;
 	
 	//button
-	@FindBy(xpath = "//button[@class='col-12 btn btn-lg btn-success m-1']")
+	@FindBy(xpath = "//button[@class='col-12 btn btn-success m-1']")
 	public WebElement createKindergartenQueue;
 		
 	

@@ -14,8 +14,8 @@ public class SpecialistPasswordChange extends AbstractPage{
 	
 	Random rand = new Random();
 	
-	private String username = "admin";
-	private String password = "admin";
+	//private String username = "admin";
+	//private String password = "admin";
 	
 	
 	private String newSpecialistUsername = "Specialist" + rand.nextInt(1000);
@@ -25,11 +25,13 @@ public class SpecialistPasswordChange extends AbstractPage{
 	@FindBy(name = "name")
 	private WebElement inputNewSpecialist;
 	
-	@FindBy( css = "#root > div > div > div > div > form > div.form-group.mx-auto.mt-3 > div > input")
+	@FindBy(css = "#root > div > div > div > form > div.form-group.mx-auto.mt-3 > div > input")
+	//( css = "#root > div > div > div > div > form > div.form-group.mx-auto.mt-3 > div > input")
 	public WebElement inputUsername;
 	
 	
-	@FindBy( css = "#root > div > div > div > div > form > div:nth-child(2) > div > input")
+	@FindBy(css = "#root > div > div > div > form > div:nth-child(2) > div > input")
+	//( css = "#root > div > div > div > div > form > div:nth-child(2) > div > input")
 	private WebElement inputPassword;
 	
 	@FindBy(xpath = "//input[@id='Dabartinis slaptažodis']")
@@ -42,39 +44,44 @@ public class SpecialistPasswordChange extends AbstractPage{
 	@FindBy(id = "Pakartokite naują slaptažodį")
 	private WebElement repeatNewPassword;
 	
-	@FindBy(css = "#root > div > div > div > div:nth-child(2) > div > form > div.form-group.m-3 > div")
+	@FindBy(xpath = "//div[@class='alert alert-success']")
+	//(css = "#root > div > div > div > div:nth-child(2) > div > form > div.form-group.m-3 > div")
 	private WebElement successfulSpecialistLogin;
 	
 	
 	//buttons
 	
-	@FindBy(css = "#root > div > div > div > div > form > div.form-group.text-center.mt-5 > button")
+	@FindBy(xpath = "//button[@class='btn btn-secondary']")
+	//(css = "#root > div > div > div > div > form > div.form-group.text-center.mt-5 > button")
 	private WebElement loginButton;
 	
-	@FindBy(css = "#root > div > div > div > div.col-12.col-sm-12.col-md-4.col-lg-4 > form > button.btn.btn-success.mr-3")
+	@FindBy(xpath = "//button[@class='btn btn-success mr-3']")
+	//(css = "#root > div > div > div > div.col-12.col-sm-12.col-md-4.col-lg-4 > form > button.btn.btn-success.mr-3")
 	private WebElement createSpecialistButton;
 	
 	@FindBy(css = "#root > div > nav > div:nth-child(3) > li > a")
 	private WebElement logoutButton;
 	
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(5) > a")
+	@FindBy(css = "#root > nav > ul > li:nth-child(5) > a")
+	//(css = "#root > div > nav > div:nth-child(3) > li:nth-child(5) > a")
 	private WebElement myDataButton;
 	
 		
-	@FindBy(css = "#root > div > div > div > div:nth-child(2) > div > form > div:nth-child(2) > button")
+	@FindBy(css = "#root > div > div > div:nth-child(2) > div > form > div:nth-child(2) > button")
+	//(css = "#root > div > div > div > div:nth-child(2) > div > form > div:nth-child(2) > button")
 	private WebElement changePassword;
 	
 	
 	//methods
 	//admin login
 	
-	public void addAdminUsername() {
-		inputUsername.sendKeys(username);
-	}
+	//public void addAdminUsername() {
+	//	inputUsername.sendKeys(username);
+	//}
 	
-	public void addAdminPassword() {
-		inputPassword.sendKeys(password);
-	}
+	//public void addAdminPassword() {
+	//	inputPassword.sendKeys(password);
+	//}
 	
 	
 // create new specialist
@@ -86,9 +93,9 @@ public class SpecialistPasswordChange extends AbstractPage{
 		createSpecialistButton.click();
 	}
 	
-	public void clickAdminLogoutButton() {
-		logoutButton.click();
-	}
+	//public void clickAdminLogoutButton() {
+	//	logoutButton.click();
+	//}
 	
 	
 	//specialist login
@@ -125,7 +132,7 @@ public class SpecialistPasswordChange extends AbstractPage{
 
 	public void clickChangeButton() {
 		changePassword.click();
-		//wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > div > div > div:nth-child(2) > div > form > div.form-group.m-3 > div")));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 	}
 	
 	

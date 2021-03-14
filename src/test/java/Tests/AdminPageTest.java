@@ -4,6 +4,9 @@ import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import BaseTest.BaseTest;
@@ -18,7 +21,9 @@ public class AdminPageTest extends BaseTest{
 		MainAdminPage mainPage = new MainAdminPage(driver);
 		
 		mainPage.doAdminLogin();
-		Thread.sleep(1000);
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > nav > ul > li:nth-child(2) > a > span")));
+		//Thread.sleep(1000);
 		//paimam teksta, tikrinam ar prisijungimas sekmingas
 		String actualLoginText = mainPage.textSuccessfulAdminLogin();
 		String expectedLoginText = "Administratorius";

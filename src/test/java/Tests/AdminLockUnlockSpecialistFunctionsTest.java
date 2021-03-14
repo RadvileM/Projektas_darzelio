@@ -2,6 +2,8 @@ package Tests;
 
 import static org.testng.Assert.assertEquals;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,7 +17,7 @@ import page.MainSpecialistPage;
 
 public class AdminLockUnlockSpecialistFunctionsTest extends BaseTest {
   @Test
-  public void adminLockUnlockSpecialistFunctions() throws InterruptedException {
+  public void adminLockUnlockSpecialistFunctions() throws InterruptedException, IOException {
 	  MainAdminPage mainPage = new MainAdminPage(driver);
 	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
 	  KindergartensPage kindergartensPage = new KindergartensPage(driver);
@@ -24,7 +26,7 @@ public class AdminLockUnlockSpecialistFunctionsTest extends BaseTest {
 	  //admin prisijungia prie sistemos
 	  mainPage.doAdminLogin();
 	  WebDriverWait wait = new WebDriverWait(driver, 5);
-	  wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='btn btn-sm btn-secondary col-12']")));
+	  wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='btn btn-sm btn-secondary']")));
 	 //admin uzrakina Specialisto funkcijas
 	  mainPage.clickLockButton();
 	  
@@ -83,7 +85,7 @@ public class AdminLockUnlockSpecialistFunctionsTest extends BaseTest {
 		  
 		  
 		  kindergartenQueue.clickKindergartenQueuePage();
-		  wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='col-12 btn btn-lg btn-success m-1']")));
+		  wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='col-12 btn btn-success m-1']")));
 		  
 		  String actualKindergartenQueueButtonText = kindergartenQueue.textOnKindergartenQueueButton();
 		  String expectedKindergartenQueueButtonText = "Sudaryti eiles";
