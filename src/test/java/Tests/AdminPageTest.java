@@ -2,6 +2,8 @@ package Tests;
 
 import static org.testng.Assert.assertEquals;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import BaseTest.BaseTest;
@@ -12,10 +14,11 @@ public class AdminPageTest extends BaseTest{
 	
 
 	@Test(groups = "smoke")
-	public void mainPageTest () throws InterruptedException {
+	public void mainPageTest () throws InterruptedException, IOException {
 		MainAdminPage mainPage = new MainAdminPage(driver);
 		
 		mainPage.doAdminLogin();
+		Thread.sleep(1000);
 		//paimam teksta, tikrinam ar prisijungimas sekmingas
 		String actualLoginText = mainPage.textSuccessfulAdminLogin();
 		String expectedLoginText = "Administratorius";

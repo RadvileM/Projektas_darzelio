@@ -38,10 +38,10 @@ public class MainParentPage extends AbstractPage {
 	
 	//inputs
 	
-	@FindBy( css = "#root > div > div > div > div > form > div.form-group.mx-auto.mt-3 > div > input")
+	@FindBy( css = "#root > div > div > div > form > div.form-group.mx-auto.mt-3 > div > input")
 	public WebElement inputUsername;
 	
-	@FindBy( css = "#root > div > div > div > div > form > div:nth-child(2) > div > input")
+	@FindBy( css = "#root > div > div > div > form > div:nth-child(2) > div > input")
 	private WebElement inputPassword;
 	
 	@FindBy (id ="name")
@@ -62,7 +62,7 @@ public class MainParentPage extends AbstractPage {
 	
 	
 	//buttons
-	@FindBy(css = "#root > div > div > div > div > form > div.form-group.text-center.mt-5 > button")
+	@FindBy(css = "#root > div > div > div > form > div.form-group.text-center.mt-5 > button")
 	private WebElement loginButton;
 		
 	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(6) > a")
@@ -78,7 +78,7 @@ public class MainParentPage extends AbstractPage {
 	@FindBy(id = "ROLE_PARENT")
 	private WebElement selectParent;
 	
-	@FindBy(css = "#root > div > div > div > div.col-12.col-sm-12.col-md-4.col-lg-4 > form > button.btn.btn-success.mr-3")
+	@FindBy(css = "#root > div > div > div.col-12.col-sm-12.col-md-4.col-lg-4 > form > button.btn.btn-success.mr-3")
 	private WebElement clickCreate;
 		
 	//"Mano duomenys"
@@ -100,7 +100,7 @@ public class MainParentPage extends AbstractPage {
 	private WebElement updatePersonalData;
 	
 	//parent creates child's registration form
-	@FindBy(css = "#root > div > div > div:nth-child(1) > div > a")
+	@FindBy(css = "#root > div > div:nth-child(1) > div > a")
 	private WebElement clickFormUpload;
 	
 	@FindBy(css = "#root > div > div > div:nth-child(3) > div > table > tbody > tr > td:nth-child(7) > div.btn-group > button.btn.btn-success")
@@ -145,7 +145,7 @@ public class MainParentPage extends AbstractPage {
 	@FindBy(id = "vaikoMiestas")
 	private WebElement inputChildCity;
 	
-	@FindBy(css = "#root > div > div > form > button.btn.btn-success.my-5")
+	@FindBy(css = "#root > form > button.btn.btn-success.my-5")
 	private WebElement submitButton;
 	
 	@FindBy(xpath = "//div[text()='Failas įkeltas sėkmingai!']")
@@ -319,7 +319,7 @@ public class MainParentPage extends AbstractPage {
 	}
 	
 	public void selectPriorities() {
-		   List<WebElement> optionsElems = driver.findElements(By.xpath("//*[@id=\"root\"]/div/div/form/div[6]/div/div[1]//input"));
+		   List<WebElement> optionsElems = driver.findElements(By.xpath("//*[@id=\"root\"]/form/div[6]/div"));
 		    int maxOptions = optionsElems.size();
 		    Random random = new Random();
 		    int randomOption = random.nextInt(maxOptions);

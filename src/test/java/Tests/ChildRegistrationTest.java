@@ -2,6 +2,8 @@ package Tests;
 
 import static org.testng.Assert.assertEquals;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
@@ -14,7 +16,7 @@ public class ChildRegistrationTest extends BaseTest{
 
 	
 	@Test(groups = "regression")
-	public void pdfUploadTest () throws InterruptedException {
+	public void pdfUploadTest () throws InterruptedException, IOException {
 	
 		MainAdminPage adminPage = new MainAdminPage(driver);
 		MainParentPage parentPage = new MainParentPage(driver);
