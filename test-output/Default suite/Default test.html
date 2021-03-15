@@ -57,15 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<<<<<<< HEAD
-<td>Started on:</td><td>Sun Mar 14 18:57:49 EET 2021</td>
+<td>Started on:</td><td>Sun Mar 14 19:26:17 EET 2021</td>
 </tr>
-<tr><td>Total time:</td><td>20 seconds (20982 ms)</td>
-=======
-<td>Started on:</td><td>Fri Mar 12 09:28:18 EET 2021</td>
-</tr>
-<tr><td>Total time:</td><td>10 seconds (10493 ms)</td>
->>>>>>> 933470f2763b081974f84a898afadf9d07612f21
+<tr><td>Total time:</td><td>17 seconds (17689 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -81,27 +75,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<<<<<<< HEAD
 <td title='Tests.ChildRegistrationTest.pdfUploadTest()'><b>pdfUploadTest</b><br>Test class: Tests.ChildRegistrationTest</td>
-<td><div><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot set property &apos;style&apos; of null
-  (Session info: chrome=89.0.4389.82)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;RADVILESPC&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;11.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\Radvile\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56449}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 13b43e6e8a7f3afcca2a85f762cab21b
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
-	at Tests.ChildRegistrationTest.pdfUploadTest(ChildRegistrationTest.java:68)
+<td><div><pre>java.lang.NullPointerException
+	at utilities.WaitUtils$1.apply(WaitUtils.java:16)
+	at utilities.WaitUtils$1.apply(WaitUtils.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at utilities.WaitUtils.waitForJS(WaitUtils.java:14)
+	at Tests.ChildRegistrationTest.pdfUploadTest(ChildRegistrationTest.java:65)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -130,26 +110,13 @@ Session ID: 13b43e6e8a7f3afcca2a85f762cab21b
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1173504361", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1173504361'><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot set property &apos;style&apos; of null
-  (Session info: chrome=89.0.4389.82)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;RADVILESPC&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;11.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\Radvile\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56449}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 13b43e6e8a7f3afcca2a85f762cab21b
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
-	at Tests.ChildRegistrationTest.pdfUploadTest(ChildRegistrationTest.java:68)
+</pre></div><a href='#' onClick='toggleBox("stack-trace824357143", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace824357143'><pre>java.lang.NullPointerException
+	at utilities.WaitUtils$1.apply(WaitUtils.java:16)
+	at utilities.WaitUtils$1.apply(WaitUtils.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at utilities.WaitUtils.waitForJS(WaitUtils.java:14)
+	at Tests.ChildRegistrationTest.pdfUploadTest(ChildRegistrationTest.java:65)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -179,14 +146,8 @@ Session ID: 13b43e6e8a7f3afcca2a85f762cab21b
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>17</td>
+<td>14</td>
 <td>Tests.ChildRegistrationTest@3246fb96</td></tr>
-=======
-<td title='Tests.AdminLockUnlockSpecialistFunctionsTest.adminLockUnlockSpecialistFunctions()'><b>adminLockUnlockSpecialistFunctions</b><br>Test class: Tests.AdminLockUnlockSpecialistFunctionsTest</td>
-<td></td>
-<td>6</td>
-<td>Tests.AdminLockUnlockSpecialistFunctionsTest@2525ff7e</td></tr>
->>>>>>> 933470f2763b081974f84a898afadf9d07612f21
 </table><p>
 </body>
 </html>

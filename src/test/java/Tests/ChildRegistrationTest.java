@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import BaseTest.BaseTest;
 import page.MainAdminPage;
 import page.MainParentPage;
+import utilities.WaitUtils;
 
 public class ChildRegistrationTest extends BaseTest{
 
@@ -39,7 +40,10 @@ public class ChildRegistrationTest extends BaseTest{
 		Thread.sleep(1000);
 		
 		//parent creates child's registration form
+	
 		parentPage.clickFormUploadButton();
+		
+		
 		parentPage.addParentNameInput();
 		parentPage.addParentLastnameInput();
 		parentPage.addParentID();
