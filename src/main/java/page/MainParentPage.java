@@ -3,6 +3,8 @@ package page;
 import java.util.List;
 import java.util.Random;
 
+import javax.xml.xpath.XPath;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.By.ByTagName;
 import org.openqa.selenium.WebDriver;
@@ -36,7 +38,7 @@ public class MainParentPage extends AbstractPage {
 	
 	
 	
-	//inputs
+	//**inputs
 	
 	@FindBy( css = "#root > div > div > div > form > div.form-group.mx-auto.mt-3 > div > input")
 	public WebElement inputUsername;
@@ -61,17 +63,16 @@ public class MainParentPage extends AbstractPage {
 	private WebElement inputEmail;
 	
 	
-	//buttons
+	//**buttons
 	@FindBy(css = "#root > div > div > div > form > div.form-group.text-center.mt-5 > button")
 	private WebElement loginButton;
 		
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(6) > a")
+	@FindBy(css = "#root > nav > ul > li:nth-child(6) > a")
 	private WebElement logoutButton;
 	
 	//upload PDF button
 	@FindBy(css = "#root > div > div > div:nth-child(3) > div > table > tbody > tr > td:nth-child(7) > div.btn-group > button.btn.btn-secondary")
 	private WebElement uploadPdfButton;
-	
 	
 	
 	//admin selects the parent button
@@ -82,28 +83,43 @@ public class MainParentPage extends AbstractPage {
 	private WebElement clickCreate;
 		
 	//"Mano duomenys"
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(4) > a")
+	@FindBy(css = "#root > nav > ul > li:nth-child(4) > a")
 	private WebElement myDataButton;
 
-	@FindBy(css = "#root > div > div > div > div:nth-child(1) > div > form > div:nth-child(2) > div > button")
+	@FindBy(css = "#root > div > div > div:nth-child(1) > div > form > div:nth-child(2) > div > button.btn.btn-success.mx-auto")
 	private WebElement updateMyDataButton;
 	
-	//text
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(5) > a > span")
+	//"Mano prasymai"
+	@FindBy(xpath = "//button[@class='btn btn-info ']")
+	private WebElement checkApplicationForm;
+	
+	@FindBy(xpath = "//button[@class='btn btn-danger my-5 m-1']")
+	private WebElement deleteApplicationFormButton;
+	
+	@FindBy(xpath = "//button[@class='swal-button swal-button--confirm sweet-confirm']")
+	private WebElement delteApplicatonFormConfirmationButton;
+	
+	//**text
+	@FindBy(css = "#root > nav > ul > li:nth-child(5) > a > span")
 	private WebElement successfulParentLogin;
 	
-	@FindBy(css = "#root > div > div > div > div > form > div.form-group.mx-auto.mt-3 > label")
+	
+	@FindBy(css = "#root > div > div > div > form > div.form-group.mx-auto.mt-3 > label")
+	//(css = "#root > div > div > div > div > form > div.form-group.mx-auto.mt-3 > label")
 	private WebElement successfulParentLogout;
 	
 	//"mano duomenys"
-	@FindBy(css = "#root > div > div > div > div:nth-child(1) > div > form > div.form-group.m-3 > div")
+	@FindBy(xpath = "//div[@class='alert alert-success']")
+	//(css = "#root > div > div > div > div:nth-child(1) > div > form > div.form-group.m-3 > div")
 	private WebElement updatePersonalData;
 	
 	//parent creates child's registration form
 	@FindBy(css = "#root > div > div:nth-child(1) > div > a")
 	private WebElement clickFormUpload;
 	
-	@FindBy(css = "#root > div > div > div:nth-child(3) > div > table > tbody > tr > td:nth-child(7) > div.btn-group > button.btn.btn-success")
+	@FindBy(xpath = "//button[@class='btn btn-success']")
+	//(css = "#root > div > div:nth-child(3) > div > table > tbody > tr > td:nth-child(7) > div.btn-group > button.btn.btn-secondary")
+	//(css = "#root > div > div > div:nth-child(3) > div > table > tbody > tr > td:nth-child(7) > div.btn-group > button.btn.btn-success")
 	private WebElement uploadFile;
 	
 	@FindBy(id = "vardasAtstovas1")
@@ -145,11 +161,18 @@ public class MainParentPage extends AbstractPage {
 	@FindBy(id = "vaikoMiestas")
 	private WebElement inputChildCity;
 	
-	@FindBy(css = "#root > form > button.btn.btn-success.my-5")
+	@FindBy(id = "inCity")
+	private WebElement inputPriority;
+	
+	@FindBy(xpath = "//button[@class='btn btn-success my-5']")
 	private WebElement submitButton;
 	
 	@FindBy(xpath= "//div[text()='Failas įkeltas sėkmingai!']")
 	private WebElement textSuccessfulPdfUpload;
+	
+	//Mano prasymai
+	@FindBy(xpath = "//div[@class='alert alert-secondary text-center d-grid gap-2 col-6 mx-auto']")
+	private WebElement textApplicationFormDelted;
 	
 	
 	
@@ -158,13 +181,13 @@ public class MainParentPage extends AbstractPage {
 	}
 	
 	
-	//methods
+	//**methods
 	public void doParentLogin() {
 		inputUsername.sendKeys(username);
 		inputPassword.sendKeys(password);
 		loginButton.click();
 		  wait.until(
-		          ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > nav > div:nth-child(3) > li:nth-child(4) > a")));
+		          ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > nav > ul > li:nth-child(5) > a > span")));
 	}
 	
 	public void doParentLoginUploadTest() {
@@ -218,7 +241,7 @@ public class MainParentPage extends AbstractPage {
 	
 	public void clickUpdateMyDataButton() {
 		updateMyDataButton.click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > div > div > div:nth-child(1) > div > form > div.form-group.m-3 > div")));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 	}
 	
 	public String textUpdateData() {
@@ -317,11 +340,8 @@ public class MainParentPage extends AbstractPage {
 	}
 	
 	public void selectPriorities() {
-		   List<WebElement> optionsElems = driver.findElements(By.xpath("//*[@id=\"root\"]/form/div[6]/div"));
-		    int maxOptions = optionsElems.size();
-		    Random random = new Random();
-		    int randomOption = random.nextInt(maxOptions);
-		    optionsElems.get(randomOption).click();
+		inputPriority.click();
+		   
 	}
 	
 	public void clickSubmitButton() {
@@ -337,4 +357,24 @@ public class MainParentPage extends AbstractPage {
 		return textSuccessfulPdfUpload.getText();
 	
 	}
+	
+	
+	//Mano prasymai
+	
+	public void clickApplicationFormInformationButton() {
+		checkApplicationForm.click();
+	}
+	
+	public void deleteApplicationFormButton() {
+		deleteApplicationFormButton.click();
+	}
+	
+	public void delteApplicationFormConfirmationButton() {
+		delteApplicatonFormConfirmationButton.click();
+	}
+	
+	public String getTextNoApplicationsForms() {
+		return textApplicationFormDelted.getText();
+	}
 }
+

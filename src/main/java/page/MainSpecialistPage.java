@@ -25,11 +25,11 @@ public class MainSpecialistPage extends AbstractPage {
 	
 	//inputs
 	
-	@FindBy( css = "#root > div > div > div > div > form > div.form-group.mx-auto.mt-3 > div > input")
+	@FindBy( css = "#root > div > div > div > form > div.form-group.mx-auto.mt-3 > div > input")
 	public WebElement inputUsername;
 	
 	
-	@FindBy( css = "#root > div > div > div > div > form > div:nth-child(2) > div > input")
+	@FindBy( css = "#root > div > div > div > form > div:nth-child(2) > div > input")
 	private WebElement inputPassword;
 	
 	// add personal data "Mano duomenys"
@@ -47,37 +47,42 @@ public class MainSpecialistPage extends AbstractPage {
 	private WebElement inputEmail;
 	
 	//links navbar
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(1) > a")
+	@FindBy(css = "#root > nav > ul > li:nth-child(1) > a")
+	//(css = "#root > div > nav > div:nth-child(3) > li:nth-child(1) > a")
 	private WebElement kindergartenQueueButton;
 	
 	
 	//buttons
-	@FindBy(css = "#root > div > div > div > div > form > div.form-group.text-center.mt-5 > button")
+	@FindBy(css = "#root > div > div > div > form > div.form-group.text-center.mt-5 > button")
 	private WebElement loginButton;
 	
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(7) > a")
+	
+	@FindBy(css = "#root > nav > ul > li:nth-child(7) > a")
 	private WebElement logoutButton;
 	
 	//"Mano duomenys"
-	@FindBy(css = "#root > div > div > div > div:nth-child(1) > div > form > div:nth-child(2) > div > button")
+	@FindBy(css = "#root > div > div > div:nth-child(1) > div > form > div:nth-child(2) > div > button.btn.btn-success.mx-auto")
+	//(css = "#root > div > div > div > div:nth-child(1) > div > form > div:nth-child(2) > div > button")
 	private WebElement updateMyDataButton;
 	
 	
 	//text
-	@FindBy(css = "#root > div > nav > div:nth-child(3) > li:nth-child(6) > a")
+	@FindBy(css = "#root > nav > ul > li:nth-child(6) > a")
 	private WebElement successfulSpecialistLogin;
 	
-	@FindBy(css = "#root > div > div > div > div > form > div.form-group.mx-auto.mt-3 > label")
+	
+	@FindBy(css = "#root > div > div > div > form > div.form-group.mx-auto.mt-3 > label")
 	private WebElement successfulSpecialistLogout;
 
 	
 	//"mano duomenys"
-	@FindBy(css = "#root > div > div > div > div:nth-child(1) > div > form > div.form-group.m-3 > div")
+	@FindBy(xpath = "//div[@class='alert alert-success']")
+	//(css = "#root > div > div > div > div:nth-child(1) > div > form > div.form-group.m-3 > div")
 	private WebElement updatePersonalData;
 	
 	//"Specialisto lock/unlock funkcijos"
 	
-	@FindBy(xpath = "//div[@class='alert alert-secondary mb-2']")
+	@FindBy(xpath = "//div[@class='alert alert-secondary mb-2 mt-5']")
 	private WebElement lockedKindergartenAddList;
 	
 	@FindBy(xpath = "//div[@class='alert alert-secondary col']")
@@ -95,7 +100,7 @@ public class MainSpecialistPage extends AbstractPage {
 		inputPassword.sendKeys(password);
 		loginButton.click();
 		  wait.until(
-		          ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > nav > div:nth-child(3) > li:nth-child(6) > a")));
+		          ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-secondary mb-2 mt-5']")));
 		   
 	}
 	
@@ -138,7 +143,7 @@ public class MainSpecialistPage extends AbstractPage {
 	
 	public void clickUpdateMyDataButton() {
 		updateMyDataButton.click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > div > div > div > div:nth-child(1) > div > form > div.form-group.m-3 > div")));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 	}
 	
 	public String textUpdateData() {

@@ -3,6 +3,8 @@ package Tests;
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -42,8 +44,8 @@ public class ChildRegistrationTest extends BaseTest{
 		//parent creates child's registration form
 	
 		parentPage.clickFormUploadButton();
-		
-		
+
+		Thread.sleep(4000);
 		parentPage.addParentNameInput();
 		parentPage.addParentLastnameInput();
 		parentPage.addParentID();
@@ -57,25 +59,22 @@ public class ChildRegistrationTest extends BaseTest{
 		parentPage.addBirthdateInput();
 		parentPage.addChildAddress();
 		parentPage.addChildCity();
-		Thread.sleep(2000);
 		parentPage.selectKindergarten();
-		Thread.sleep(2000);
 		parentPage.selectPriorities();
-		Thread.sleep(2000);
 		parentPage.clickSubmitButton();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		
 		//pdf upload
 		
 		  JavascriptExecutor js = (JavascriptExecutor) driver;
 		  js.executeScript("document.querySelector('#files').style ='';");
-		 
 		  
+		  
+		 //takes PDF file for resources folder
+		  Path resourceDirectory = Paths.get("src", "test", "resources");
+		  String absolutePath = resourceDirectory.toFile().getAbsolutePath();
+			driver.findElement(By.id("files")).sendKeys(absolutePath + "\\Test_PDF.pdf");
 
-		//driver.findElement(By.id("files")).sendKeys("C:\\Users\\Radvile\\Desktop\\Test_PDF.pdf");
-//FIX THIS!!!	//	driver.findElement(By.id("files")).sendKeys("..\\src\\test\\resources\\Test_PDF.pdf");
-
-		driver.findElement(By.id("files")).sendKeys("C:\\Users\\Gintare\\Desktop\\Medicinine_pazyma.pdf");
 
 	
 
