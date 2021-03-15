@@ -60,7 +60,7 @@ public class ChildRegistrationTest extends BaseTest{
 		parentPage.selectPriorities();
 		Thread.sleep(2000);
 		parentPage.clickSubmitButton();
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		
 		//pdf upload
 		
@@ -72,7 +72,7 @@ public class ChildRegistrationTest extends BaseTest{
 //FIX THIS!!!	//	driver.findElement(By.id("files")).sendKeys("..\\src\\test\\resources\\Test_PDF.pdf");
 
 		driver.findElement(By.id("files")).sendKeys("C:\\Users\\Gintare\\Desktop\\Medicinine_pazyma.pdf");
-		
+		//"src/test/resources/Test_PDF.pdf"
 	
 
 	parentPage.clickPdfUploadButton();

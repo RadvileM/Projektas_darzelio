@@ -38,7 +38,7 @@ public class MainParentPage extends AbstractPage {
 	
 	
 	
-	//inputs
+	//**inputs
 	
 	@FindBy( css = "#root > div > div > div > form > div.form-group.mx-auto.mt-3 > div > input")
 	public WebElement inputUsername;
@@ -63,7 +63,7 @@ public class MainParentPage extends AbstractPage {
 	private WebElement inputEmail;
 	
 	
-	//buttons
+	//**buttons
 	@FindBy(css = "#root > div > div > div > form > div.form-group.text-center.mt-5 > button")
 	private WebElement loginButton;
 		
@@ -73,7 +73,6 @@ public class MainParentPage extends AbstractPage {
 	//upload PDF button
 	@FindBy(css = "#root > div > div > div:nth-child(3) > div > table > tbody > tr > td:nth-child(7) > div.btn-group > button.btn.btn-secondary")
 	private WebElement uploadPdfButton;
-	
 	
 	
 	//admin selects the parent button
@@ -90,7 +89,17 @@ public class MainParentPage extends AbstractPage {
 	@FindBy(css = "#root > div > div > div:nth-child(1) > div > form > div:nth-child(2) > div > button.btn.btn-success.mx-auto")
 	private WebElement updateMyDataButton;
 	
-	//text
+	//"Mano prasymai"
+	@FindBy(xpath = "//button[@class='btn btn-info ']")
+	private WebElement checkApplicationForm;
+	
+	@FindBy(xpath = "//button[@class='btn btn-danger my-5 m-1']")
+	private WebElement deleteApplicationFormButton;
+	
+	@FindBy(xpath = "//button[@class='swal-button swal-button--confirm sweet-confirm']")
+	private WebElement delteApplicatonFormConfirmationButton;
+	
+	//**text
 	@FindBy(css = "#root > nav > ul > li:nth-child(5) > a > span")
 	private WebElement successfulParentLogin;
 	
@@ -158,6 +167,10 @@ public class MainParentPage extends AbstractPage {
 	@FindBy(xpath= "//div[text()='Failas įkeltas sėkmingai!']")
 	private WebElement textSuccessfulPdfUpload;
 	
+	//Mano prasymai
+	@FindBy(xpath = "//div[@class='alert alert-secondary text-center d-grid gap-2 col-6 mx-auto']")
+	private WebElement textApplicationFormDelted;
+	
 	
 	
 	public MainParentPage(WebDriver driver) {
@@ -165,7 +178,7 @@ public class MainParentPage extends AbstractPage {
 	}
 	
 	
-	//methods
+	//**methods
 	public void doParentLogin() {
 		inputUsername.sendKeys(username);
 		inputPassword.sendKeys(password);
@@ -344,4 +357,24 @@ public class MainParentPage extends AbstractPage {
 		return textSuccessfulPdfUpload.getText();
 	
 	}
+	
+	
+	//Mano prasymai
+	
+	public void clickApplicationFormInformationButton() {
+		checkApplicationForm.click();
+	}
+	
+	public void deleteApplicationFormButton() {
+		deleteApplicationFormButton.click();
+	}
+	
+	public void delteApplicationFormConfirmationButton() {
+		delteApplicatonFormConfirmationButton.click();
+	}
+	
+	public String getTextNoApplicationsForms() {
+		return textApplicationFormDelted.getText();
+	}
 }
+

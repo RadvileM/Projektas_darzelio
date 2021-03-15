@@ -6,3 +6,5 @@ encoding//src/test/java/Tests/AdminLockUnlockSpecialistFunctionsTest.java=UTF-8
 encoding//src/test/java/Tests/ChildRegistrationTest.java=UTF-8
 encoding//src/test/java/Tests/KindergartenAddToList.java=UTF-8
 encoding//src/test/java/Tests/ParentAddPersonalDataTest.java=UTF-8
+encoding//src/test/java/Tests/ParentDeleteApplicationformTest.java=UTF-8
+encoding//src/test/java/Tests/SpecialistCreateQueueTest.java=UTF-8

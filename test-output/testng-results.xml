@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-14T23:42:30 EET" name="Default suite" finished-at="2021-03-14T23:42:56 EET" duration-ms="26002">
+  <suite started-at="2021-03-15T16:09:57 EET" name="Default suite" finished-at="2021-03-15T16:10:11 EET" duration-ms="14141">
     <groups>
-      <group name="regression">
-        <method signature="ChildRegistrationTest.pdfUploadTest()[pri:0, instance:Tests.ChildRegistrationTest@37858383]" name="pdfUploadTest" class="Tests.ChildRegistrationTest"/>
-      </group> <!-- regression -->
     </groups>
-    <test started-at="2021-03-14T23:42:30 EET" name="Default test" finished-at="2021-03-14T23:42:56 EET" duration-ms="26002">
-      <class name="Tests.ChildRegistrationTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.ChildRegistrationTest@37858383]" started-at="2021-03-14T23:42:30 EET" name="setUp" finished-at="2021-03-14T23:42:30 EET" duration-ms="11" status="PASS">
+    <test started-at="2021-03-15T16:09:57 EET" name="Default test" finished-at="2021-03-15T16:10:11 EET" duration-ms="14141">
+      <class name="Tests.SpecialistCreateQueueTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.SpecialistCreateQueueTest@2525ff7e]" started-at="2021-03-15T16:09:57 EET" name="setUp" finished-at="2021-03-15T16:09:57 EET" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.ChildRegistrationTest@37858383]" started-at="2021-03-14T23:42:30 EET" name="openHomePage" finished-at="2021-03-14T23:42:33 EET" duration-ms="3145" status="PASS">
+        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.SpecialistCreateQueueTest@2525ff7e]" started-at="2021-03-15T16:09:57 EET" name="openHomePage" finished-at="2021-03-15T16:10:00 EET" duration-ms="3354" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openHomePage -->
-        <test-method signature="pdfUploadTest()[pri:0, instance:Tests.ChildRegistrationTest@37858383]" started-at="2021-03-14T23:42:33 EET" name="pdfUploadTest" finished-at="2021-03-14T23:42:56 EET" duration-ms="22793" status="PASS">
+        <test-method signature="specialistCreateWithdrawQueue()[pri:0, instance:Tests.SpecialistCreateQueueTest@2525ff7e]" started-at="2021-03-15T16:10:00 EET" name="specialistCreateWithdrawQueue" finished-at="2021-03-15T16:10:11 EET" duration-ms="10717" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- pdfUploadTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.ChildRegistrationTest@37858383]" started-at="2021-03-14T23:42:56 EET" name="tearDown" finished-at="2021-03-14T23:42:56 EET" duration-ms="15" status="PASS">
+        </test-method> <!-- specialistCreateWithdrawQueue -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.SpecialistCreateQueueTest@2525ff7e]" started-at="2021-03-15T16:10:11 EET" name="tearDown" finished-at="2021-03-15T16:10:11 EET" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Tests.ChildRegistrationTest -->
+      </class> <!-- Tests.SpecialistCreateQueueTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
