@@ -20,10 +20,8 @@ public class KindergartenAddToList extends BaseTest {
 	  kindergartensPage.addKindergartenName();
 	  kindergartensPage.addKindergartenAddress();
 	  kindergartensPage.clickAddNewKindergartenButton();
-	  //Thread.sleep(1000);
-	  String actualAddedKindergartenText = kindergartensPage.textKindergartenAdded();
-	  String expectedKindergartenText = "Darželis įvestas sėkmingai!";
-	  assertEquals(actualAddedKindergartenText, expectedKindergartenText);
+	  //assert the text
+	  assertEquals(kindergartensPage.textKindergartenAdded(), "Darželis įvestas sėkmingai!");
 	 
   }
 }

@@ -11,42 +11,34 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class KindergartensPage extends AbstractPage {
 	WebDriverWait wait = new WebDriverWait(driver, 5);
-	
+
 	Random rand = new Random();
-	
+
 	private String name = "Vilniaus Saulute " + rand.nextInt(1000);
 	private String adrress = "Gedimino pr. " + rand.nextInt(1000);
-	
-	
-	//buttons
+
+	/* buttons */
 	@FindBy(xpath = "//button[@class='btn btn-md btn-success']")
 	public WebElement newKindergatenButton;
-	
+
 	@FindBy(xpath = "//button[@class='btn btn-md btn-success']")
 	public WebElement confirmKindergartenButton;
-	
 
-
-	//inputs
+	/* inputs */
 	@FindBy(id = "name")
 	public WebElement inputKindergartenName;
-	
+
 	@FindBy(id = "address")
 	public WebElement inputKindergartenAddress;
-	
-	
-	//text
 
+	/* text */
 	@FindBy(xpath = "//div[@class='alert alert-success']")
-	//(css = "#root > div > div > div > div.col-7 > div.row > div > table > tfoot > tr > td:nth-child(2) > div > div")
 	public WebElement textKindergartenAddedsuccessful;
-	
+
 	@FindBy(xpath = "//button[@class='btn btn-md btn-success']")
-	//(css = "#root > div > div > div > div.col-7 > div.row > div > table > tfoot > tr > td:nth-child(1) > button > p")
 	public WebElement textOnAddKindergartenButton;
-	
-	
-	//methods
+
+	/* methods */
 	public void clickNewKindergartenButton() {
 		newKindergatenButton.click();
 	}
@@ -54,35 +46,35 @@ public class KindergartensPage extends AbstractPage {
 	public void addKindergartenName() {
 		inputKindergartenName.sendKeys(name);
 	}
-	
+
 	public void addKindergartenAddress() {
 		inputKindergartenAddress.sendKeys(adrress);
 	}
-	
-	public void clickAddNewKindergartenButton() {
-		confirmKindergartenButton.click();	
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 
+	public void clickAddNewKindergartenButton() {
+		confirmKindergartenButton.click();
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 	}
-	
+
 	public String textKindergartenAdded() {
 		return textKindergartenAddedsuccessful.getText();
-		
-	}
-	
-	//tikrina ar yra mygtukas prideti darzeli
-	
-	public String textOnButtonAddKindergarten() {
-		return textOnAddKindergartenButton.getText();
-				
-	}
-	
-	
-	
-	public KindergartensPage(WebDriver driver) {
-		super(driver);
 
 	}
-	
+
+	// tikrina ar yra mygtukas prideti darzeli
+
+	public String textOnButtonAddKindergarten() {
+		return textOnAddKindergartenButton.getText();
+	}
+
+	/* waits */
+
+	public void waitForAddKindergartenButtonText() {
+		new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(this.textOnAddKindergartenButton));
+	}
+
+	public KindergartensPage(WebDriver driver) {
+		super(driver);
+	}
 
 }

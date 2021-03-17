@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tests.ChildRegistrationTest">
+      <class name="Tests.SpecialistCreateQueueTest">
         <methods>
           <include name="tearDown"/>
-          <include name="pdfUploadTest"/>
+          <include name="specialistCreateWithdrawQueue"/>
           <include name="openHomePage"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- Tests.ChildRegistrationTest -->
+      </class> <!-- Tests.SpecialistCreateQueueTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

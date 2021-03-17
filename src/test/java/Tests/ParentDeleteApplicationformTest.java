@@ -13,7 +13,7 @@ import page.MainParentPage;
 
 public class ParentDeleteApplicationformTest extends BaseTest {
 	
-  @Test
+  @Test(groups = "regression")
   public void parentDeleteAplicationform() throws IOException, InterruptedException {
 		MainParentPage parentPage = new MainParentPage(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 5);

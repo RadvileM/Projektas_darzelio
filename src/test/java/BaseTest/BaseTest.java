@@ -19,7 +19,6 @@ public abstract class BaseTest {
 	
 	@BeforeMethod (alwaysRun = true)
 	public void openHomePage(){
-		//System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://akademijait.vtmc.lt:8181/dis-app/");
@@ -30,6 +29,6 @@ public abstract class BaseTest {
 	@AfterMethod (alwaysRun = true)
 	public static void tearDown() {
 		driver.manage().deleteAllCookies();
-		//driver.close();
+		driver.close();
 	}
 }
