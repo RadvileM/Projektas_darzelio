@@ -33,10 +33,6 @@ public class MainParentPage extends AbstractPage {
 	private String parentID = "12345678" + (rand.nextInt(900) + 100);
 	private String parentAddress = "Ukmerges g. 19";
 	private String parentCity = "Vilnius";
-	private String parentEmail1 = "test@test.lt";
-	private String childID1 = "3234567" + (rand.nextInt(9000) + 1000);
-	private String parentEmail = "marius@adomaitis" + rand.nextInt(1000) + ".lt";
-	private String childID = "3234567" + rand.nextInt(10000);
 	private String birthdate = "09122016";
 
 	/* inputs */
