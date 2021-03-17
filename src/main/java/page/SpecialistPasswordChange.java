@@ -10,7 +10,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SpecialistPasswordChange extends AbstractPage {
-	WebDriverWait wait = new WebDriverWait(driver, 5);
+	
+	public SpecialistPasswordChange(WebDriver driver) {
+		super(driver);
+	}
+	
+	WebDriverWait wait = new WebDriverWait(driver, 10);
 
 	Random rand = new Random();
 
@@ -36,9 +41,6 @@ public class SpecialistPasswordChange extends AbstractPage {
 	@FindBy(id = "Pakartokite naują slaptažodį")
 	private WebElement repeatNewPassword;
 
-	@FindBy(xpath = "//div[@class='alert alert-success']")
-	private WebElement successfulSpecialistLogin;
-
 	/* buttons */
 
 	@FindBy(xpath = "//button[@class='btn btn-secondary']")
@@ -55,6 +57,10 @@ public class SpecialistPasswordChange extends AbstractPage {
 
 	@FindBy(css = "#root > div > div > div:nth-child(2) > div > form > div:nth-child(2) > button")
 	private WebElement changePassword;
+
+	/* texts */
+	@FindBy(xpath = "//div[@class='alert alert-success']")
+	private WebElement successfulSpecialistLogin;
 
 	/* methods */
 
@@ -79,15 +85,11 @@ public class SpecialistPasswordChange extends AbstractPage {
 
 	public void clickLoginButton() {
 		loginButton.click();
-		// wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root
-		// > div > nav > div:nth-child(3) > li > a")));
 	}
 
 	// Specialist changes the password
 	public void clickMyDataButton() {
 		myDataButton.click();
-		wait.until(ExpectedConditions
-				.presenceOfElementLocated(By.cssSelector("#root > div > div > div > div:nth-child(1) > div > h2")));
 	}
 
 	public void addOldPassword() {
@@ -101,16 +103,29 @@ public class SpecialistPasswordChange extends AbstractPage {
 
 	public void clickChangeButton() {
 		changePassword.click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 	}
 
 	public String textSuccessfulSpecialistLogin() {
 		return successfulSpecialistLogin.getText();
 	}
 
-	public SpecialistPasswordChange(WebDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
+
+	/* waits */
+
+	public void waitForInputOldPassword() {
+		new WebDriverWait(driver, 8).until(ExpectedConditions.visibilityOf(this.oldPassword));
 	}
+
+	public void waitForMyDataButton() {
+		wait.until(
+				ExpectedConditions.presenceOfElementLocated(By.cssSelector("#root > nav > ul > li:nth-child(6) > a")));
+	}
+
+	public void waitForSuccessfulSpecialistChangePasswordText() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
+	}
+	
+	
+	
 
 }

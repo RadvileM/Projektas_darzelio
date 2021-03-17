@@ -12,7 +12,7 @@ import page.KindergartensPage;
 import page.MainAdminPage;
 import page.MainSpecialistPage;
 
-public class AdminLockUnlockSpecialistFunctionsTest extends BaseTest {
+public class StopAndUnlockSpecialistFunctionsTest extends BaseTest {
 	@Test(groups = "regression")
 	public void adminLockUnlockSpecialistFunctions() throws InterruptedException, IOException {
 		MainAdminPage mainPage = new MainAdminPage(driver);
@@ -20,17 +20,19 @@ public class AdminLockUnlockSpecialistFunctionsTest extends BaseTest {
 		KindergartensPage kindergartensPage = new KindergartensPage(driver);
 		KindergartenQueuePage kindergartenQueue = new KindergartenQueuePage(driver);
 
-		// admin lock Specialist functions, Specialist check if functions is locked
+		// admin login and lock specialist functions
 		mainPage.doAdminLogin();
 		mainPage.waitForLockSpecialistButton();
 		mainPage.clickLockButton();
-
 		mainPage.waitForSuccessfulLockedSpecialistText();
+
 		// assert the text
 		assertEquals(mainPage.textSuccessfulLockedUnlockedSpecialist(),
 				"Švietimo specialistų funkcionalumas užrakintas");
 
 		mainPage.doAdminLogout();
+
+		// specialist login and check functions
 		specialistPage.doSpecialistLogin();
 
 		// assert the text
@@ -43,32 +45,27 @@ public class AdminLockUnlockSpecialistFunctionsTest extends BaseTest {
 
 		specialistPage.doSpecialistLogout();
 
-		// admin unlock Specialist functions, specialist check if functions are unlocked
+		// admin login and unlock Specialist functions
 		mainPage.doAdminLogin();
 		mainPage.waitForUnlockSpecialistButton();
-		//wait.until(
-		//		ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='btn btn-sm btn-info col-12']")));
-		
 		mainPage.clickUnlockButton();
 		mainPage.waitForSuccessfulUnlockedSpecialistText();
-		//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 
 		// assert the text
 		assertEquals(mainPage.textSuccessfulLockedUnlockedSpecialist(),
 				"Švietimo specialistų funkcionalumas atstatytas");
 
 		mainPage.doAdminLogout();
+
+		// specialist login and check functions
 		specialistPage.doSpecialistLogin();
 		kindergartensPage.waitForAddKindergartenButtonText();
-		//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='btn btn-md btn-success']")));
 
 		// assert the text
 		assertEquals(kindergartensPage.textOnButtonAddKindergarten(), "Pridėti darželį");
 
 		kindergartenQueue.clickKindergartenQueuePage();
 		kindergartenQueue.waitForCreateQueueButton();
-		//wait.until(
-		//		ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='col-12 btn btn-success m-1']")));
 
 		// assert the text
 		assertEquals(kindergartenQueue.textOnKindergartenQueueButton(), "Sudaryti eiles");

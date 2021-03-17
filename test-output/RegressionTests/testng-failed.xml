@@ -8,14 +8,14 @@
       </run>
     </groups>
     <classes>
-      <class name="Tests.ParentDeleteApplicationformTest">
+      <class name="Tests.KindergartenAddToList">
         <methods>
-          <include name="parentDeleteAplicationform"/>
+          <include name="uploadKindergarenToList"/>
           <include name="tearDown"/>
           <include name="openHomePage"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- Tests.ParentDeleteApplicationformTest -->
+      </class> <!-- Tests.KindergartenAddToList -->
     </classes>
   </test> <!-- regression(failed) -->
 </suite> <!-- Failed suite [RegressionTests] -->

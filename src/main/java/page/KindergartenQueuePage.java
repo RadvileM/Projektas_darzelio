@@ -7,7 +7,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class KindergartenQueuePage extends AbstractPage {
-	WebDriverWait wait = new WebDriverWait(driver, 5);
+
+	public KindergartenQueuePage(WebDriver driver) {
+		super(driver);
+	}
+
+	WebDriverWait wait = new WebDriverWait(driver, 10);
 
 	/* Nav bar link */
 	@FindBy(css = "#root > nav > ul > li:nth-child(1) > a")
@@ -30,7 +35,6 @@ public class KindergartenQueuePage extends AbstractPage {
 	@FindBy(css = "#root > div > div > div > div > div > div:nth-child(1) > div > p:nth-child(1)")
 	public WebElement registeredChildNumber;
 
-
 	/* methods */
 	public void clickKindergartenQueuePage() {
 		kinderGartenQueueButton.click();
@@ -42,20 +46,14 @@ public class KindergartenQueuePage extends AbstractPage {
 
 	public void clickCreateKindergartenQueueButton() {
 		createKindergartenQueue.click();
-		//wait.until(ExpectedConditions
-				//.presenceOfElementLocated(By.xpath("//button[@class='swal-button swal-button--confirm']")));
 	}
 
 	public void clickConfirmButtonCreateQueue() {
 		confirmCreateQueueButton.click();
-		//wait.until(ExpectedConditions.presenceOfElementLocated(
-			//	By.cssSelector("#root > div > div > div > div > div > div:nth-child(1) > div > p:nth-child(1)")));
 	}
 
 	public void clickCancelCreatedQueueButton() {
 		cancelCreatedQueueButton.click();
-		//wait.until(ExpectedConditions.presenceOfElementLocated(
-				//By.cssSelector("#root > div > div > div > div > div > div:nth-child(1) > div > p:nth-child(2)")));
 	}
 
 	public void clickCancelConfirmCreateQueueButton() {
@@ -73,19 +71,15 @@ public class KindergartenQueuePage extends AbstractPage {
 	/* waits */
 
 	public void waitForCreateQueueButton() {
-		new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(this.createKindergartenQueue));
+		new WebDriverWait(driver, 8).until(ExpectedConditions.visibilityOf(this.createKindergartenQueue));
 	}
-	
+
 	public void waitForConfirimCreateQueueButton() {
-		new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(this.confirmCreateQueueButton));
+		new WebDriverWait(driver, 8).until(ExpectedConditions.visibilityOf(this.confirmCreateQueueButton));
 	}
-	
+
 	public void waitForCancelCreateQueueButton() {
-		new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(this.cancelCreatedQueueButton));
-	}
-	
-	public KindergartenQueuePage(WebDriver driver) {
-		super(driver);
+		new WebDriverWait(driver, 8).until(ExpectedConditions.visibilityOf(this.cancelCreatedQueueButton));
 	}
 
 }

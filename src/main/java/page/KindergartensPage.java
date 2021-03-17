@@ -10,7 +10,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class KindergartensPage extends AbstractPage {
-	WebDriverWait wait = new WebDriverWait(driver, 5);
+
+	public KindergartensPage(WebDriver driver) {
+		super(driver);
+	}
+
+	WebDriverWait wait = new WebDriverWait(driver, 10);
 
 	Random rand = new Random();
 
@@ -32,7 +37,7 @@ public class KindergartensPage extends AbstractPage {
 	public WebElement inputKindergartenAddress;
 
 	/* text */
-	@FindBy(xpath = "//div[@class='alert alert-success']")
+	@FindBy(css = "#root > div > div > div.col-12.col-sm-12.col-md-7.col-lg-7.mt-5 > div.row > div > table > tfoot > tr > td:nth-child(2) > div > div")
 	public WebElement textKindergartenAddedsuccessful;
 
 	@FindBy(xpath = "//button[@class='btn btn-md btn-success']")
@@ -53,7 +58,6 @@ public class KindergartensPage extends AbstractPage {
 
 	public void clickAddNewKindergartenButton() {
 		confirmKindergartenButton.click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 	}
 
 	public String textKindergartenAdded() {
@@ -61,7 +65,7 @@ public class KindergartensPage extends AbstractPage {
 
 	}
 
-	// tikrina ar yra mygtukas prideti darzeli
+	// check if are button add kindergarten
 
 	public String textOnButtonAddKindergarten() {
 		return textOnAddKindergartenButton.getText();
@@ -70,11 +74,11 @@ public class KindergartensPage extends AbstractPage {
 	/* waits */
 
 	public void waitForAddKindergartenButtonText() {
-		new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(this.textOnAddKindergartenButton));
+		new WebDriverWait(driver, 8).until(ExpectedConditions.visibilityOf(this.textOnAddKindergartenButton));
 	}
 
-	public KindergartensPage(WebDriver driver) {
-		super(driver);
+	public void waitForConfirmNewKindergartenButton() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 	}
 
 }

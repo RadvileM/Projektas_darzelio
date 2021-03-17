@@ -12,7 +12,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainParentPage extends AbstractPage {
-	WebDriverWait wait = new WebDriverWait(driver, 5);
+
+	public MainParentPage(WebDriver driver) {
+		super(driver);
+	}
+
+	WebDriverWait wait = new WebDriverWait(driver, 10);
 
 	Random rand = new Random();
 
@@ -162,10 +167,6 @@ public class MainParentPage extends AbstractPage {
 	@FindBy(xpath = "//div[@class='alert alert-secondary text-center d-grid gap-2 col-6 mx-auto']")
 	private WebElement textApplicationFormDelted;
 
-	public MainParentPage(WebDriver driver) {
-		super(driver);
-	}
-
 	/* methods */
 	public void doParentLogin() {
 		inputUsername.sendKeys(username);
@@ -182,7 +183,7 @@ public class MainParentPage extends AbstractPage {
 	}
 
 	public void doParentLogout() {
-		logoutButton.click();
+		this.logoutButton.click();
 	}
 
 	public String textSuccessfulParentLogin() {
@@ -196,14 +197,12 @@ public class MainParentPage extends AbstractPage {
 	// Mano duomenys
 	public void clickMyDataButton() {
 		myDataButton.click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("Vardas")));
 	}
 
 	// add Parent personal data
 	public void addParentName() {
 		inputPersonalName.clear();
 		inputPersonalName.sendKeys(name);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='Pavardė']")));
 	}
 
 	public void addParentLastName() {
@@ -223,7 +222,6 @@ public class MainParentPage extends AbstractPage {
 
 	public void clickUpdateMyDataButton() {
 		updateMyDataButton.click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 	}
 
 	public String textUpdateData() {
@@ -355,4 +353,49 @@ public class MainParentPage extends AbstractPage {
 	public String getTextNoApplicationsForms() {
 		return textApplicationFormDelted.getText();
 	}
+
+	/* waits */
+	public void waitForMyDataNameInput() {
+		new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(this.inputPersonalName));
+	}
+
+	public void waitForUpdateMyDataButton() {
+		new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(this.updateMyDataButton));
+	}
+
+	public void waitForApplicationFormUploadButton() {
+		wait.until(
+				ExpectedConditions.presenceOfElementLocated(By.xpath("//h2[@class=' text-center text-success my-5']")));
+	}
+
+	public void waitForChooseKindergartenFromList() {
+		wait.until(ExpectedConditions
+				.presenceOfElementLocated(By.cssSelector("#root > form > div:nth-child(5) > div > h3")));
+	}
+
+	public void waitForSpecialConditionsList() {
+		wait.until(ExpectedConditions
+				.presenceOfElementLocated(By.cssSelector("#root > form > div:nth-child(6) > div > h3")));
+	}
+
+	public void waitForApplicationSubmitButton() {
+		wait.until(ExpectedConditions.visibilityOf(this.submitButton));
+	}
+
+	public void waitForCheckApplicationFormButton() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class='btn btn-info ']")));
+	}
+
+	public void waitForDeleteApplicationFormButton() {
+		wait.until(ExpectedConditions.visibilityOf(this.deleteApplicationFormButton));
+	}
+
+	public void waitForDeleteApplicationFormText() {
+		wait.until(ExpectedConditions.visibilityOf(this.textApplicationFormDelted));
+	}
+
+	public void waitForSuccessulPdfUploadText() {
+		wait.until(ExpectedConditions.visibilityOf(this.textSuccessfulPdfUpload));
+	}
+
 }

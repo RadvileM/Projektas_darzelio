@@ -12,6 +12,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainAdminPage extends AbstractPage {
 
+	public MainAdminPage(WebDriver driver) {
+		super(driver);
+	}
+
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+
 	private String username1 = "admin";
 	private String password2 = "admin";
 
@@ -46,10 +52,6 @@ public class MainAdminPage extends AbstractPage {
 	// lock/unlock user Specialist
 	@FindBy(xpath = "//div[@class='alert alert-success']")
 	public WebElement successfulLockedUnlockedSpecialist;
-
-	public MainAdminPage(WebDriver driver) {
-		super(driver);
-	}
 
 	/* methods */
 	public void doAdminLogin() throws IOException {
@@ -105,19 +107,22 @@ public class MainAdminPage extends AbstractPage {
 	/* waits */
 
 	public void waitForLockSpecialistButton() {
-		new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(this.lockButton));
+		wait.until(ExpectedConditions.visibilityOf(this.lockButton));
 	}
 
 	public void waitForSuccessfulLockedSpecialistText() {
-		new WebDriverWait(driver, 5)
-				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 	}
 
 	public void waitForUnlockSpecialistButton() {
-		new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(this.unlockButton));
+		wait.until(ExpectedConditions.visibilityOf(this.unlockButton));
 	}
 
 	public void waitForSuccessfulUnlockedSpecialistText() {
-		new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(this.successfulLockedUnlockedSpecialist));
+		wait.until(ExpectedConditions.visibilityOf(this.successfulLockedUnlockedSpecialist));
+	}
+
+	public void waitForCreateUserText() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@class='fw-bold text-secondary']")));
 	}
 }

@@ -10,7 +10,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainSpecialistPage extends AbstractPage {
-	WebDriverWait wait = new WebDriverWait(driver, 5);
+
+	public MainSpecialistPage(WebDriver driver) {
+		super(driver);
+	}
+
+	WebDriverWait wait = new WebDriverWait(driver, 10);
 
 	Random rand = new Random();
 
@@ -67,16 +72,12 @@ public class MainSpecialistPage extends AbstractPage {
 	@FindBy(xpath = "//div[@class='alert alert-success']")
 	private WebElement updatePersonalData;
 
-	// "Specialisto lock/unlock funkcijos"
+	// "Specialisto lock/unlock functions"
 	@FindBy(xpath = "//div[@class='alert alert-secondary mb-2 mt-5']")
 	private WebElement lockedKindergartenAddList;
 
 	@FindBy(xpath = "//div[@class='alert alert-secondary col']")
 	private WebElement creatQueueLocked;
-
-	public MainSpecialistPage(WebDriver driver) {
-		super(driver);
-	}
 
 	/* methods */
 	// Specialist login
@@ -125,7 +126,6 @@ public class MainSpecialistPage extends AbstractPage {
 
 	public void clickUpdateMyDataButton() {
 		updateMyDataButton.click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='alert alert-success']")));
 	}
 
 	public String textUpdateData() {
@@ -145,4 +145,12 @@ public class MainSpecialistPage extends AbstractPage {
 		return creatQueueLocked.getText();
 	}
 
+	/* waits */
+	public void waitForMyDataNameInput() {
+		wait.until(ExpectedConditions.visibilityOf(this.inputPersonalName));
+	}
+
+	public void waitForUpdatedDataText() {
+		new WebDriverWait(driver, 7).until(ExpectedConditions.visibilityOf(this.updatePersonalData));
+	}
 }

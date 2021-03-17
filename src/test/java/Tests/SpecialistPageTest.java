@@ -8,29 +8,24 @@ import BaseTest.BaseTest;
 import page.MainSpecialistPage;
 
 public class SpecialistPageTest extends BaseTest {
-	
-	
-	
-  @Test(groups = "smoke")
-  public void specialistLoginPageTest() throws InterruptedException {
-	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
-	  
-	  specialistPage.doSpecialistLogin();
-	  
-		String actualLoginText = specialistPage.textSuccessfulSpecialistLogin();
-		String expectedLoginText = "TomasMikalauskas" + "\n" + "Švietimo specialistas";
-		assertEquals(actualLoginText, expectedLoginText);		
-  }
-  
-  @Test(groups = "smoke")
-  public void specialistLogoutPageTest() throws InterruptedException {
-	  MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
-	  
-	  specialistPage.doSpecialistLogin();
-	  specialistPage.doSpecialistLogout();
-	  
-		String actualLoginText = specialistPage.textSuccessfulSpecialistLogout();
-		String expectedLoginText = "Prisijungimo vardas";
-		assertEquals(actualLoginText, expectedLoginText);
-  }
+
+	@Test(groups = "smoke")
+	public void specialistLoginPageTest() throws InterruptedException {
+		MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
+
+		specialistPage.doSpecialistLogin();
+		// text assert
+		assertEquals(specialistPage.textSuccessfulSpecialistLogin(),
+				"TomasMikalauskas" + "\n" + "Švietimo specialistas");
+	}
+
+	@Test(groups = "smoke")
+	public void specialistLogoutPageTest() throws InterruptedException {
+		MainSpecialistPage specialistPage = new MainSpecialistPage(driver);
+
+		specialistPage.doSpecialistLogin();
+		specialistPage.doSpecialistLogout();
+		// text assert
+		assertEquals(specialistPage.textSuccessfulSpecialistLogout(), "Prisijungimo vardas");
+	}
 }
