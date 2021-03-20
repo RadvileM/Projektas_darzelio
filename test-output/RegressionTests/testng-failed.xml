@@ -16,14 +16,6 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- Tests.KindergartenAddToList -->
-      <class name="Tests.SpecialistPasswordChangeTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="openHomePage"/>
-          <include name="specialistPasswordChangeTest"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- Tests.SpecialistPasswordChangeTest -->
     </classes>
   </test> <!-- regression(failed) -->
 </suite> <!-- Failed suite [RegressionTests] -->

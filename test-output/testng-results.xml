@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
   <suite started-at="2021-03-16T09:11:36 EET" name="Default suite" finished-at="2021-03-16T09:11:55 EET" duration-ms="19523">
+=======
+<testng-results ignored="18" total="23" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-03-17T19:34:10 EET" name="SmokeTests" finished-at="2021-03-17T19:34:42 EET" duration-ms="32533">
+>>>>>>> 3123d9cb717d2f5c5534158804cdf36fcc7a78ef
     <groups>
-      <group name="regression">
-        <method signature="ChildRegistrationTest.pdfUploadTest()[pri:0, instance:Tests.ChildRegistrationTest@3246fb96]" name="pdfUploadTest" class="Tests.ChildRegistrationTest"/>
-      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="AdminPageTest.mainPageTest()[pri:0, instance:Tests.AdminPageTest@73ee04c8]" name="mainPageTest" class="Tests.AdminPageTest"/>
+        <method signature="ParentPageTest.parentLoginPageTest()[pri:0, instance:Tests.ParentPageTest@747edf66]" name="parentLoginPageTest" class="Tests.ParentPageTest"/>
+        <method signature="ParentPageTest.parentLogoutTest()[pri:0, instance:Tests.ParentPageTest@747edf66]" name="parentLogoutTest" class="Tests.ParentPageTest"/>
+        <method signature="SpecialistPageTest.specialistLoginPageTest()[pri:0, instance:Tests.SpecialistPageTest@3d1cfad4]" name="specialistLoginPageTest" class="Tests.SpecialistPageTest"/>
+        <method signature="SpecialistPageTest.specialistLogoutPageTest()[pri:0, instance:Tests.SpecialistPageTest@3d1cfad4]" name="specialistLogoutPageTest" class="Tests.SpecialistPageTest"/>
+      </group> <!-- smoke -->
     </groups>
+<<<<<<< HEAD
     <test started-at="2021-03-16T09:11:36 EET" name="Default test" finished-at="2021-03-16T09:11:55 EET" duration-ms="19523">
       <class name="Tests.ChildRegistrationTest">
         <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.ChildRegistrationTest@3246fb96]" started-at="2021-03-16T09:11:36 EET" name="setUp" finished-at="2021-03-16T09:11:36 EET" duration-ms="16" status="PASS">
@@ -84,10 +96,79 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- pdfUploadTest -->
         <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.ChildRegistrationTest@3246fb96]" started-at="2021-03-16T09:11:55 EET" name="tearDown" finished-at="2021-03-16T09:11:55 EET" duration-ms="46" status="PASS">
+=======
+    <test started-at="2021-03-17T19:34:10 EET" name="smoke" finished-at="2021-03-17T19:34:42 EET" duration-ms="32533">
+      <class name="Tests.ParentPageTest">
+        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.ParentPageTest@747edf66]" started-at="2021-03-17T19:34:15 EET" name="openHomePage" finished-at="2021-03-17T19:34:18 EET" duration-ms="2718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openHomePage -->
+        <test-method signature="parentLoginPageTest()[pri:0, instance:Tests.ParentPageTest@747edf66]" started-at="2021-03-17T19:34:18 EET" name="parentLoginPageTest" finished-at="2021-03-17T19:34:19 EET" duration-ms="1483" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- parentLoginPageTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.ParentPageTest@747edf66]" started-at="2021-03-17T19:34:19 EET" name="tearDown" finished-at="2021-03-17T19:34:24 EET" duration-ms="4264" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Tests.ChildRegistrationTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.ParentPageTest@747edf66]" started-at="2021-03-17T19:34:24 EET" name="openHomePage" finished-at="2021-03-17T19:34:26 EET" duration-ms="2488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openHomePage -->
+        <test-method signature="parentLogoutTest()[pri:0, instance:Tests.ParentPageTest@747edf66]" started-at="2021-03-17T19:34:26 EET" name="parentLogoutTest" finished-at="2021-03-17T19:34:28 EET" duration-ms="1802" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- parentLogoutTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.ParentPageTest@747edf66]" started-at="2021-03-17T19:34:28 EET" name="tearDown" finished-at="2021-03-17T19:34:28 EET" duration-ms="358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.ParentPageTest -->
+      <class name="Tests.SpecialistPageTest">
+        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.SpecialistPageTest@3d1cfad4]" started-at="2021-03-17T19:34:28 EET" name="openHomePage" finished-at="2021-03-17T19:34:31 EET" duration-ms="3232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openHomePage -->
+        <test-method signature="specialistLoginPageTest()[pri:0, instance:Tests.SpecialistPageTest@3d1cfad4]" started-at="2021-03-17T19:34:31 EET" name="specialistLoginPageTest" finished-at="2021-03-17T19:34:33 EET" duration-ms="1285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- specialistLoginPageTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.SpecialistPageTest@3d1cfad4]" started-at="2021-03-17T19:34:33 EET" name="tearDown" finished-at="2021-03-17T19:34:37 EET" duration-ms="4191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.SpecialistPageTest@3d1cfad4]" started-at="2021-03-17T19:34:37 EET" name="openHomePage" finished-at="2021-03-17T19:34:40 EET" duration-ms="3133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openHomePage -->
+        <test-method signature="specialistLogoutPageTest()[pri:0, instance:Tests.SpecialistPageTest@3d1cfad4]" started-at="2021-03-17T19:34:40 EET" name="specialistLogoutPageTest" finished-at="2021-03-17T19:34:42 EET" duration-ms="1981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- specialistLogoutPageTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.SpecialistPageTest@3d1cfad4]" started-at="2021-03-17T19:34:42 EET" name="tearDown" finished-at="2021-03-17T19:34:42 EET" duration-ms="255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.SpecialistPageTest -->
+      <class name="Tests.AdminPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.AdminPageTest@73ee04c8]" started-at="2021-03-17T19:34:10 EET" name="setUp" finished-at="2021-03-17T19:34:10 EET" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openHomePage()[pri:0, instance:Tests.AdminPageTest@73ee04c8]" started-at="2021-03-17T19:34:10 EET" name="openHomePage" finished-at="2021-03-17T19:34:14 EET" duration-ms="3771" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openHomePage -->
+        <test-method signature="mainPageTest()[pri:0, instance:Tests.AdminPageTest@73ee04c8]" started-at="2021-03-17T19:34:14 EET" name="mainPageTest" finished-at="2021-03-17T19:34:15 EET" duration-ms="1167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mainPageTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.AdminPageTest@73ee04c8]" started-at="2021-03-17T19:34:15 EET" name="tearDown" finished-at="2021-03-17T19:34:15 EET" duration-ms="327" status="PASS">
+>>>>>>> 3123d9cb717d2f5c5534158804cdf36fcc7a78ef
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.AdminPageTest -->
+    </test> <!-- smoke -->
+  </suite> <!-- SmokeTests -->
 </testng-results>

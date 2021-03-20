@@ -8,14 +8,24 @@
       </run>
     </groups>
     <classes>
-      <class name="Tests.AdminPageTest">
+      <class name="Tests.ParentPageTest">
         <methods>
-          <include name="mainPageTest"/>
+          <include name="parentLogoutTest"/>
           <include name="tearDown"/>
+          <include name="parentLoginPageTest"/>
           <include name="openHomePage"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- Tests.AdminPageTest -->
+      </class> <!-- Tests.ParentPageTest -->
+      <class name="Tests.SpecialistPageTest">
+        <methods>
+          <include name="specialistLoginPageTest"/>
+          <include name="tearDown"/>
+          <include name="specialistLogoutPageTest"/>
+          <include name="openHomePage"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Tests.SpecialistPageTest -->
     </classes>
   </test> <!-- smoke(failed) -->
 </suite> <!-- Failed suite [SmokeTests] -->
